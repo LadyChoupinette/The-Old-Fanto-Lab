@@ -72,7 +72,7 @@ function Index() {
             <Helmet>
                 <title>The Old Fanto Lab</title>
             </Helmet>
-            <h1>The Old Fanto Lab</h1>
+            <h1>The Old Fanto Lab</h1>v0.1.0
             <p>
                 <React.Fragment>
                     <span>Available trainer list :</span><br/>
@@ -84,6 +84,12 @@ function Index() {
                 {/*<span>{trainers ? trainers.r : 'Loading Trainers...'}</span>*/}
             </p>
             <br/>
+            <p>
+                Click Enter Journey to send all your IDLE trainers on a Journey.
+                If they have been on a journey less than 12h ago, the transaction will fail and can be rejected when asked.
+                You can immediately leave by clicking the Leave button after the 'Enter' transaction succeeded.
+
+            </p>
             <ButtonBatchJourney adr={adr} trainers={trainers} amount={amount}/>
             <br/>
             <br/>
