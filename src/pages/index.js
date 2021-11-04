@@ -12,8 +12,10 @@ function Index() {
 
     const [adr, setAdr] = useState(null)
     const [trainers, setTrainers] = useState(null);
+    const [trainersIdle, setTrainersIdle] = useState(null);
+    const [trainersHR, setTrainersHR] = useState(null);
+    const [trainersJourney, setTrainersJourney] = useState(null);
     const [walletAddress, setWallet] = useState("");
-    const [status, setStatus] = useState("");
 
     let amount = 1
 
@@ -32,14 +34,32 @@ function Index() {
 
             const num = await contractMain.methods.balanceOf(adr).call();
             let trainerList = []
+            let trainer;
+            let trainersIdle = []
+            let trainersJourney = []
+            let trainersHR = []
             for (let i = 0; i < num; i++) {
-                trainerList.push(
-                    await contractMain.methods.tokenOfOwnerByIndex(adr, i).call()
-                )
+                trainer = await contractMain.methods.tokenOfOwnerByIndex(adr, i).call()
+                trainerList.push(trainer)
+                let status = await contractMain.methods.getStatus(trainer).call()
+                switch (status) {
+                    case '0':
+                        trainersIdle.push(trainer)
+                        break;
+                    case '3':
+                        trainersHR.push(trainer)
+                        break;
+                    case '4':
+                        trainersJourney.push(trainer)
+
+                }
             }
 
             console.log(trainerList)
             setTrainers(trainerList);
+            setTrainersIdle(trainersIdle);
+            setTrainersHR(trainersHR);
+            setTrainersJourney(trainersJourney);
             setAdr(adr);
         };
         init();
@@ -50,38 +70,16 @@ function Index() {
     return (
         <main>
             <Helmet>
-                <title>Gatsby + Node.js (TypeScript) API</title>
+                <title>The Old Fanto Lab</title>
             </Helmet>
-            <h1>Gatsby + Node.js (TypeScript) API</h1>
-            <h2>
-                Deployed with{' '}
-                <a
-                    href="https://vercel.com/docs"
-                    target="_blank"
-                    rel="noreferrer noopener"
-                >
-                    Vercel
-                </a>
-                !
-            </h2>
-            <p>
-                <a
-                    href="https://github.com/vercel/vercel/tree/main/examples/gatsby"
-                    target="_blank"
-                    rel="noreferrer noopener"
-                >
-                    This project
-                </a>{' '}
-                is a <a href="https://www.gatsbyjs.org/">Gatsby</a> app with two
-                directories, <code>/src</code> for static content and <code>/api</code>{' '}
-                which contains a serverless{' '}
-                <a href="https://nodejs.org/en/">Node.js (TypeScript)</a> function. See{' '}
-                .
-            </p>
+            <h1>The Old Fanto Lab</h1>
             <p>
                 <React.Fragment>
                     <span>Available trainer list :</span><br/>
-                        {trainers ? trainers.toString() : 'loading trainers'}
+                        All trainers : {trainers ? trainers.toString() : 'loading trainers...'}<br/>
+                        Idle trainers : {trainersIdle ? trainersIdle.toString() : 'loading trainers...'}<br/>
+                        Healing trainers : {trainersHR ? trainersHR.toString() : 'loading trainers...'}<br/>
+                        Journey trainers : {trainersJourney ? trainersJourney.toString() : 'loading trainers...'}<br/>
                 </React.Fragment>
                 {/*<span>{trainers ? trainers.r : 'Loading Trainers...'}</span>*/}
             </p>

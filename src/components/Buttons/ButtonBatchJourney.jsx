@@ -49,13 +49,13 @@ export class ButtonBatchJourney extends React.Component {
         const { items } = this.state;
         return (
             <div>
+                <button onClick={() => batchEnterJourney(this.props.adr, this.props.trainers, this.state.amount)}>Enter
+                    Journey
+                </button><br/>
                 <label>
                     Tip (for Dev)
                     <input type='number' id='amount' name='amount' value={this.state.amount} onChange={(e)=>this.amountChange(e)}/>
                 </label>
-                <button onClick={() => batchEnterJourney(this.props.adr, this.props.trainers, this.state.amount)}>Enter
-                    Journey
-                </button>
                 <button onClick={() => batchLeaveJourney(this.props.adr, this.props.trainers, this.state.amount)}>Leave
                     Journey
                 </button>
