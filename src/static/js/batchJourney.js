@@ -1,9 +1,8 @@
-import React from 'react';
+// import React from 'react';
 import {adrTOFL, contractMain, contractTOFL} from "../abi/abis";
 import web3 from "./getWeb3";
-import Web3 from 'web3'
-import {sendTrainer} from "./enterJourney";
-import {leaveJourney} from "./leaveJourney";
+// import {sendTrainer} from "./enterJourney";
+// import {leaveJourney} from "./leaveJourney";
 
 export async function batchEnterJourney(adr, ids, amount) {
 
