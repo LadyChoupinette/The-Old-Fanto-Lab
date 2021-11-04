@@ -1,4 +1,5 @@
-import web3 from '../js/getWeb3'
+import {web3} from '../js/getWeb3'
+// import Web3 from 'web3'
 
 export const abi_TOFL = [{
     "inputs": [{
@@ -475,8 +476,7 @@ export const abi_Main = [{
 }, {"inputs": [], "name": "withdraw", "outputs": [], "stateMutability": "nonpayable", "type": "function"}]
 
 export const adrTOFL = '0x9306e24616838c981251c4d64Af2B926DB3f2625';
-
 export const adrMain = '0x4F46C9D58c9736fe0f0DB5494Cf285E995c17397';
-
-export let contractMain =  new web3.eth.Contract(abi_Main, adrMain);
-export let contractTOFL =  new web3.eth.Contract(abi_TOFL, adrTOFL);
+// let web3 = new Web3(web3.currentProvider)
+// export let contractMain =  new web3.eth.Contract(abi_Main, adrMain);
+// export let contractTOFL =  new web3.eth.Contract(abi_TOFL, adrTOFL);

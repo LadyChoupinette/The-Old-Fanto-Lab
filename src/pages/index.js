@@ -3,29 +3,38 @@ import {Helmet} from 'react-helmet';
 import '../styles/index.css';
 import {ButtonEnterJourney} from "../components/Buttons/ButtonEnterJourney"
 import {ButtonBatchJourney} from "../components/Buttons/ButtonBatchJourney"
-import {contractMain} from "../static/abi/abis";
-import web3 from "../static/js/getWeb3";
+import {abi_Main, adrMain} from "../static/abi/abis";
 import {ButtonLeaveJourney} from "../components/Buttons/ButtonLeaveJourney";
-
+// import Web3 from 'web3'
+import {web3} from "../static/js/getWeb3";
 
 function Index() {
 
     const [adr, setAdr] = useState(null)
     const [trainers, setTrainers] = useState(null);
-    let amount=100000000000000000
+    const [walletAddress, setWallet] = useState("");
+    const [status, setStatus] = useState("");
+
+    let amount = 1
+
 
     useEffect(() => {
         const init = async () => {
 
-            // await window.ethereum.enable()
+            await window.ethereum.enable()
+
+            // let web3 = new Web3(window.ethereum)
             let acc = await web3.eth.getAccounts();
             let adr = acc[0]
             console.log(adr)
+
+            const contractMain = new web3.eth.Contract(abi_Main, adrMain);
+
             const num = await contractMain.methods.balanceOf(adr).call();
-            let trainerList=[]
-            for (let i=0;i<num;i++){
+            let trainerList = []
+            for (let i = 0; i < num; i++) {
                 trainerList.push(
-                    await contractMain.methods.tokenOfOwnerByIndex(adr,i).call()
+                    await contractMain.methods.tokenOfOwnerByIndex(adr, i).call()
                 )
             }
 
@@ -72,16 +81,16 @@ function Index() {
             <p>
                 <React.Fragment>
                     <span>Available trainer list :</span><br/>
-                    <ul>
                         {trainers ? trainers.toString() : 'loading trainers'}
-                    </ul>
                 </React.Fragment>
                 {/*<span>{trainers ? trainers.r : 'Loading Trainers...'}</span>*/}
             </p>
             <br/>
             <ButtonBatchJourney adr={adr} trainers={trainers} amount={amount}/>
-            <ButtonEnterJourney/>
-            <ButtonLeaveJourney/>
+            <br/>
+            <br/>
+            {/*<ButtonEnterJourney/>*/}
+            {/*<ButtonLeaveJourney/>*/}
             {/*<h2>The date according to Node.js (TypeScript) is:</h2>*/}
             {/*<p>{date ? date : 'Loading date...'}</p>*/}
         </main>

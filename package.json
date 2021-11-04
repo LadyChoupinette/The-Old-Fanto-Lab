@@ -3,7 +3,9 @@
   "name": "gatsby",
   "version": "1.0.0",
   "dependencies": {
+    "@emotion/styled": "^11.3.0",
     "electron": "^15.3.0",
+    "framer-motion": "^5.2.0",
     "gatsby": "^2.18.14",
     "gatsby-image": "^2.0.15",
     "gatsby-plugin-manifest": "^2.0.5",
@@ -14,6 +16,7 @@
     "web3": "^1.6.0"
   },
   "devDependencies": {
+    "@chakra-ui/react": "^1.6.12",
     "@vercel/node": "1.9.0"
   },
   "scripts": {
