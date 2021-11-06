@@ -7,6 +7,7 @@ import {abi_Main, adrMain} from "../static/abi/abis";
 import {ButtonLeaveJourney} from "../components/Buttons/ButtonLeaveJourney";
 // import Web3 from 'web3'
 import {web3} from "../static/js/getWeb3";
+import * as loader from "../../.cache/commonjs/loader";
 
 function Index() {
 
@@ -144,8 +145,12 @@ function Index() {
                     trainersLegTriple.push(j)
                 }
 
-                if(j%100===0)
+                if(j%100===0){
+                    loader.BaseLoader=0
+                    loader.setLoader(parseInt((totalSupply/j).toString()))
                     console.log("loading2 "+j)
+
+                }
             }
             setTrainersLeg(trainersLeg)
             setTrainersLegRelics(trainersLegRelics)
