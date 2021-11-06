@@ -4,11 +4,8 @@ import About from './About/About';
 import Projects from './Projects/Projects';
 import Contact from './Contact/Contact';
 import Footer from './Footer/Footer';
-import {getWeb3} from "../static/js/getWeb3"
 import {PortfolioProvider} from '../context/context';
-
 import {aboutData, contactData, contractData, footerData, heroData, projectsData} from '../mock/data';
-import {contract_Main} from "../static/abi/abis";
 
 function App() {
     const [hero, setHero] = useState({});
