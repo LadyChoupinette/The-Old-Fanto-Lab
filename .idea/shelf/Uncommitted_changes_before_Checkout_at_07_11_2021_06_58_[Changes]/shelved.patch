@@ -1,0 +1,240 @@
+Index: src/components/Footer.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import React from 'react';\r\nimport config from '../../config';\r\nexport default function Footer() {\r\n  return (\r\n    <section id=\"footer\">\r\n      <div className=\"inner\">\r\n        {/*<h2 className=\"major\">Get in touch</h2>*/}\r\n        {/*<p>*/}\r\n        {/*  Cras mattis ante fermentum, malesuada neque vitae, eleifend erat.*/}\r\n        {/*  Phasellus non pulvinar erat. Fusce tincidunt, nisl eget mattis*/}\r\n        {/*  egestas, purus ipsum consequat orci, sit amet lobortis lorem lacus in*/}\r\n        {/*  tellus. Sed ac elementum arcu. Quisque placerat auctor laoreet.*/}\r\n        {/*</p>*/}\r\n        {/*<form method=\"post\" action=\"/#\">*/}\r\n        {/*  <div className=\"fields\">*/}\r\n        {/*    <div className=\"field\">*/}\r\n        {/*      <label htmlFor=\"name\">Name</label>*/}\r\n        {/*      <input type=\"text\" name=\"name\" id=\"name\" />*/}\r\n        {/*    </div>*/}\r\n        {/*    <div className=\"field\">*/}\r\n        {/*      <label htmlFor=\"email\">Email</label>*/}\r\n        {/*      <input type=\"email\" name=\"email\" id=\"email\" />*/}\r\n        {/*    </div>*/}\r\n        {/*    <div className=\"field\">*/}\r\n        {/*      <label htmlFor=\"message\">Message</label>*/}\r\n        {/*      <textarea name=\"message\" id=\"message\" rows=\"4\"></textarea>*/}\r\n        {/*    </div>*/}\r\n        {/*  </div>*/}\r\n        {/*  <ul className=\"actions\">*/}\r\n        {/*    <li>*/}\r\n        {/*      <input type=\"submit\" value=\"Send Message\" />*/}\r\n        {/*    </li>*/}\r\n        {/*  </ul>*/}\r\n        {/*</form>*/}\r\n        <a\r\n        <ul className=\"contact\" >\r\n        {/*  <li className=\"fa-home\">{config.address}</li>*/}\r\n        {/*  <li className=\"fa-phone\">{config.phone}</li>*/}\r\n          {}\r\n\r\n          {config.socialLinks.map(social => {\r\n            const { icon, url } = social;\r\n           return (\r\n              <li className={`${icon}`} key={url}>\r\n                <a href={url}>{url}</a>\r\n              </li>\r\n            );\r\n          })}\r\n        </ul>\r\n        <ul className=\"copyright\">\r\n          <li>&copy; Artist : https://www.artstation.com/artwork/EbO0v </li>\r\n          <li>&copy; Dmitry Vishnevsky\r\n          </li>\r\n          <br/><li><a>Do you know an artist ? Contact me on tweeter !</a></li>\r\n        </ul>\r\n\r\n      </div>\r\n    </section>\r\n  );\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/components/Footer.js b/src/components/Footer.js
+--- a/src/components/Footer.js	(revision 713c1423c4477816ddb54f8fac2a4bf8b3f48378)
++++ b/src/components/Footer.js	(date 1636264503464)
+@@ -32,11 +32,11 @@
+         {/*    </li>*/}
+         {/*  </ul>*/}
+         {/*</form>*/}
+-        <a
++        <a href={"https://the-old-fanto-lab.vercel.app/"}>Lien pour la version Beta</a>
+         <ul className="contact" >
+         {/*  <li className="fa-home">{config.address}</li>*/}
+         {/*  <li className="fa-phone">{config.phone}</li>*/}
+-          {}
++        {/*  {}*/}
+ 
+           {config.socialLinks.map(social => {
+             const { icon, url } = social;
+@@ -49,9 +49,8 @@
+         </ul>
+         <ul className="copyright">
+           <li>&copy; Artist : https://www.artstation.com/artwork/EbO0v </li>
+-          <li>&copy; Dmitry Vishnevsky
+-          </li>
+-          <br/><li><a>Do you know an artist ? Contact me on tweeter !</a></li>
++          <li>&copy; Dmitry Vishnevsky</li>
++          <br/><li><a href = "https://twitter.com/TheOldFantoLab">Do you know an artist ? Contact me on tweeter !</a></li>
+         </ul>
+ 
+       </div>
+Index: .idea/vcs.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/vcs.xml b/.idea/vcs.xml
+new file mode 100644
+--- /dev/null	(date 1636264250671)
++++ b/.idea/vcs.xml	(date 1636264250671)
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="VcsDirectoryMappings">
++    <mapping directory="$PROJECT_DIR$" vcs="Git" />
++  </component>
++</project>
+\ No newline at end of file
+Index: .idea/gatsby-starter-solidstate.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/gatsby-starter-solidstate.iml b/.idea/gatsby-starter-solidstate.iml
+new file mode 100644
+--- /dev/null	(date 1636264250637)
++++ b/.idea/gatsby-starter-solidstate.iml	(date 1636264250637)
+@@ -0,0 +1,12 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<module type="WEB_MODULE" version="4">
++  <component name="NewModuleRootManager">
++    <content url="file://$MODULE_DIR$">
++      <excludeFolder url="file://$MODULE_DIR$/temp" />
++      <excludeFolder url="file://$MODULE_DIR$/.tmp" />
++      <excludeFolder url="file://$MODULE_DIR$/tmp" />
++    </content>
++    <orderEntry type="inheritedJdk" />
++    <orderEntry type="sourceFolder" forTests="false" />
++  </component>
++</module>
+\ No newline at end of file
+Index: .idea/inspectionProfiles/Project_Default.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/inspectionProfiles/Project_Default.xml b/.idea/inspectionProfiles/Project_Default.xml
+new file mode 100644
+--- /dev/null	(date 1636264250604)
++++ b/.idea/inspectionProfiles/Project_Default.xml	(date 1636264250604)
+@@ -0,0 +1,6 @@
++<component name="InspectionProjectProfileManager">
++  <profile version="1.0">
++    <option name="myName" value="Project Default" />
++    <inspection_tool class="Eslint" enabled="true" level="WARNING" enabled_by_default="true" />
++  </profile>
++</component>
+\ No newline at end of file
+Index: .idea/codeStyles/Project.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/codeStyles/Project.xml b/.idea/codeStyles/Project.xml
+new file mode 100644
+--- /dev/null	(date 1636264250655)
++++ b/.idea/codeStyles/Project.xml	(date 1636264250655)
+@@ -0,0 +1,61 @@
++<component name="ProjectCodeStyleConfiguration">
++  <code_scheme name="Project" version="173">
++    <HTMLCodeStyleSettings>
++      <option name="HTML_SPACE_INSIDE_EMPTY_TAG" value="true" />
++      <option name="HTML_QUOTE_STYLE" value="Single" />
++      <option name="HTML_ENFORCE_QUOTES" value="true" />
++    </HTMLCodeStyleSettings>
++    <JSCodeStyleSettings version="0">
++      <option name="FORCE_SEMICOLON_STYLE" value="true" />
++      <option name="SPACE_BEFORE_FUNCTION_LEFT_PARENTH" value="false" />
++      <option name="USE_DOUBLE_QUOTES" value="false" />
++      <option name="FORCE_QUOTE_STYlE" value="true" />
++      <option name="ENFORCE_TRAILING_COMMA" value="WhenMultiline" />
++      <option name="SPACES_WITHIN_OBJECT_LITERAL_BRACES" value="true" />
++      <option name="SPACES_WITHIN_IMPORTS" value="true" />
++    </JSCodeStyleSettings>
++    <TypeScriptCodeStyleSettings version="0">
++      <option name="FORCE_SEMICOLON_STYLE" value="true" />
++      <option name="SPACE_BEFORE_FUNCTION_LEFT_PARENTH" value="false" />
++      <option name="USE_DOUBLE_QUOTES" value="false" />
++      <option name="FORCE_QUOTE_STYlE" value="true" />
++      <option name="ENFORCE_TRAILING_COMMA" value="WhenMultiline" />
++      <option name="SPACES_WITHIN_OBJECT_LITERAL_BRACES" value="true" />
++      <option name="SPACES_WITHIN_IMPORTS" value="true" />
++    </TypeScriptCodeStyleSettings>
++    <VueCodeStyleSettings>
++      <option name="INTERPOLATION_NEW_LINE_AFTER_START_DELIMITER" value="false" />
++      <option name="INTERPOLATION_NEW_LINE_BEFORE_END_DELIMITER" value="false" />
++    </VueCodeStyleSettings>
++    <codeStyleSettings language="HTML">
++      <option name="SOFT_MARGINS" value="80" />
++      <indentOptions>
++        <option name="INDENT_SIZE" value="2" />
++        <option name="CONTINUATION_INDENT_SIZE" value="2" />
++        <option name="TAB_SIZE" value="2" />
++      </indentOptions>
++    </codeStyleSettings>
++    <codeStyleSettings language="JavaScript">
++      <option name="SOFT_MARGINS" value="80" />
++      <indentOptions>
++        <option name="INDENT_SIZE" value="2" />
++        <option name="CONTINUATION_INDENT_SIZE" value="2" />
++        <option name="TAB_SIZE" value="2" />
++      </indentOptions>
++    </codeStyleSettings>
++    <codeStyleSettings language="TypeScript">
++      <option name="SOFT_MARGINS" value="80" />
++      <indentOptions>
++        <option name="INDENT_SIZE" value="2" />
++        <option name="CONTINUATION_INDENT_SIZE" value="2" />
++        <option name="TAB_SIZE" value="2" />
++      </indentOptions>
++    </codeStyleSettings>
++    <codeStyleSettings language="Vue">
++      <option name="SOFT_MARGINS" value="80" />
++      <indentOptions>
++        <option name="CONTINUATION_INDENT_SIZE" value="2" />
++      </indentOptions>
++    </codeStyleSettings>
++  </code_scheme>
++</component>
+\ No newline at end of file
+Index: .idea/codeStyles/codeStyleConfig.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/codeStyles/codeStyleConfig.xml b/.idea/codeStyles/codeStyleConfig.xml
+new file mode 100644
+--- /dev/null	(date 1636264250663)
++++ b/.idea/codeStyles/codeStyleConfig.xml	(date 1636264250663)
+@@ -0,0 +1,5 @@
++<component name="ProjectCodeStyleConfiguration">
++  <state>
++    <option name="USE_PER_PROJECT_SETTINGS" value="true" />
++  </state>
++</component>
+\ No newline at end of file
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+new file mode 100644
+--- /dev/null	(date 1636264503620)
++++ b/.idea/workspace.xml	(date 1636264503620)
+@@ -0,0 +1,48 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="ChangeListManager">
++    <list default="true" id="d795641b-d770-4cf0-8d22-a0621c4daf44" name="Changes" comment="">
++      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/components/Footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer.js" afterDir="false" />
++    </list>
++    <option name="SHOW_DIALOG" value="false" />
++    <option name="HIGHLIGHT_CONFLICTS" value="true" />
++    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
++    <option name="LAST_RESOLUTION" value="IGNORE" />
++  </component>
++  <component name="Git.Settings">
++    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
++  </component>
++  <component name="ProjectId" id="20ZtrktIQwZh9qYsRSPdMaFn2Si" />
++  <component name="ProjectViewState">
++    <option name="hideEmptyMiddlePackages" value="true" />
++    <option name="showLibraryContents" value="true" />
++    <option name="showMembers" value="true" />
++  </component>
++  <component name="PropertiesComponent">
++    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
++    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
++    <property name="WebServerToolWindowFactoryState" value="false" />
++    <property name="node.js.detected.package.eslint" value="true" />
++    <property name="node.js.selected.package.eslint" value="(autodetect)" />
++    <property name="nodejs_package_manager_path" value="npm" />
++    <property name="prettierjs.PrettierConfiguration.Package" value="C:\Users\Guibole\Crypto\gatsby-starter-solidstate\node_modules\prettier" />
++    <property name="vue.rearranger.settings.migration" value="true" />
++  </component>
++  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
++  <component name="TaskManager">
++    <task active="true" id="Default" summary="Default task">
++      <changelist id="d795641b-d770-4cf0-8d22-a0621c4daf44" name="Changes" comment="" />
++      <created>1636264138857</created>
++      <option name="number" value="Default" />
++      <option name="presentableId" value="Default" />
++      <updated>1636264138857</updated>
++      <workItem from="1636264140178" duration="361000" />
++    </task>
++    <servers />
++  </component>
++  <component name="TypeScriptGeneratedFilesManager">
++    <option name="version" value="3" />
++  </component>
++</project>
+\ No newline at end of file
