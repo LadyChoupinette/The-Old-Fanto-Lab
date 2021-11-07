@@ -1,5 +1,5 @@
 import React from 'react';
-
+import {Link} from 'react-scroll'
 import Layout from '../components/Layout';
 
 import pic1 from '../assets/images/pic01.jpg';
@@ -11,10 +11,11 @@ import pic6 from '../assets/images/pic06.jpg';
 import pic7 from '../assets/images/pic07.jpg';
 
 import config from '../../config';
+import {BiDownArrow, IoIosArrowDown} from "react-icons/all";
 const IndexPage = () => (
   <Layout>
     <section id="banner">
-      <div className="inner">
+      <div className="inner" >
         {/*<div className="logo">*/}
         {/*  <span className="icon fa-diamond"></span>*/}
         {/*</div>*/}
@@ -22,6 +23,7 @@ const IndexPage = () => (
         {/*<p>{config.subHeading}</p>*/}
         <p>And while the freshly enlisted trainers were celebrating...</p>
       </div>
+        <Link id ='arrow' to='one' smooth={true}><IoIosArrowDown/></Link>
     </section>
     <br/><br/><br/>
     <section id="wrapper">
@@ -30,7 +32,7 @@ const IndexPage = () => (
           {/*<a href="/#" className="image">*/}
           {/*  <img src={pic1} alt="" />*/}
           {/*</a>*/}
-          <div className="content">
+          <div id='suite' className="content">
             {/*<h2 className="major">Magna arcu feugiat</h2>*/}
             <p>
               Far from there, on a barren planet, near an abandonned old lab...
