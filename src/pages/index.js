@@ -1,229 +1,164 @@
-import React, {useEffect, useState} from 'react';
-import {Helmet} from 'react-helmet';
-import '../styles/index.css';
-import {ButtonBatchJourney} from "../components/Buttons/ButtonBatchJourney"
-import {abi_Main, adrMain} from "../static/abi/abis";
-// import Web3 from 'web3'
-import {web3} from "../static/js/getWeb3";
-import * as loader from "../../.cache/commonjs/loader";
+import React from 'react';
 
-function Index() {
+import Layout from '../components/Layout';
 
-    const [adr, setAdr] = useState(null)
-    const [trainers, setTrainers] = useState(null);
-    const [trainersIdle, setTrainersIdle] = useState(null);
-    const [trainersHR, setTrainersHR] = useState(null);
-    const [trainersJourney, setTrainersJourney] = useState(null);
-    const [trainersLeg, setTrainersLeg] = useState(null);
-    const [trainersLegEntMystic, setTrainersLegEntMystic] = useState(null);
-    const [trainersLegEntTheo, setTrainersLegEntTheo] = useState(null);
-    const [trainersLegEntMaster, setTrainersLegEntMaster] = useState(null);
-    const [trainersLegCosmic, setTrainersLegCosmic] = useState(null);
-    const [trainersLegAncient, setTrainersLegAncient] = useState(null);
-    const [trainersLegRelics, setTrainersLegRelics] = useState(null);
-    const [trainersLegDouble, setTrainersLegDouble] = useState(null);
-    const [trainersLegTriple, setTrainersLegTriple] = useState(null);
-    const [errors, setErrors] = useState(null);
-    const [loadingState, setLoading] = useState("");
+import pic1 from '../assets/images/pic01.jpg';
+import pic2 from '../assets/images/pic02.jpg';
+import pic3 from '../assets/images/pic03.jpg';
+import pic4 from '../assets/images/pic04.jpg';
+import pic5 from '../assets/images/pic05.jpg';
+import pic6 from '../assets/images/pic06.jpg';
+import pic7 from '../assets/images/pic07.jpg';
 
-    let amount = 1
-
-
-    useEffect(() => {
-        const init = async () => {
-
-            await window.ethereum.enable()
-
-            // let web3 = new Web3(window.ethereum)
-            let acc = await web3.eth.getAccounts();
-            let adr = acc[0]
-            console.log(adr)
-
-            const contractMain = new web3.eth.Contract(abi_Main, adrMain);
-
-            const num = await contractMain.methods.balanceOf(adr).call();
-            let trainerList = []
-            let trainer;
-            let trainersIdle = []
-            let trainersJourney = []
-            let trainersHR = []
-            // let trainersLeg = []
-            for (let i = 0; i < num; i++) {
-                trainer = await contractMain.methods.tokenOfOwnerByIndex(adr, i).call()
-                trainerList.push(trainer)
-                let status = await contractMain.methods.getStatus(trainer).call()
-
-                switch (status) {
-                    case '0':
-                        trainersIdle.push(trainer)
-                        break;
-                    case '3':
-                        trainersHR.push(trainer)
-                        break;
-                    case '4':
-                        trainersJourney.push(trainer)
-                }
-
-
-            }
-
-            console.log(trainerList)
-            setTrainers(trainerList);
-            setTrainersIdle(trainersIdle);
-            setTrainersHR(trainersHR);
-            setTrainersJourney(trainersJourney);
-            setAdr(adr);
-        };
-        init();
-
-    }, []);
-
-    useEffect(() => {
-        const initLeg = async () => {
-            let trainersLeg = []
-            let trainersLegRelics = []
-            let trainersLegAncient = []
-            let trainersLegEntTheo = []
-            let trainersLegEntMystic = []
-            let trainersLegCosmic = []
-            let trainersLegEntMaster = []
-            let trainersLegDouble = []
-            let trainersLegTriple = []
-            let errors = []
-            await window.ethereum.enable()
-            const contractMain = new web3.eth.Contract(abi_Main, adrMain);
-            // console.log(await contractMain.options)
-            const totalSupply = await contractMain.methods.totalSupply().call()
-            // .constantstalSupply().call()
-            for (let j = 0; j < totalSupply; j++) {
-                let rarity = "0";
-                let job = "0";
-                let homeworld = "0";
-                try {
-                    rarity = await contractMain.methods.getRarity(j).call()
-                    job = await contractMain.methods.getClass(j).call()
-                    homeworld = await contractMain.methods.getHomeworld(j).call()
-                } catch (e) {
-                    errors.push(j)
-                }
-                let chill = 0
-                if (rarity === '3') {
-                    trainersLeg.push(j)
-                    chill = 1
-                }
-                switch (job) {
-                    case '12':
-                        chill = chill + 1
-                        trainersLegEntMystic.push(j)
-                        break;
-                    case '13':
-                        chill = chill + 1
-                        trainersLegEntTheo.push(j)
-                        break;
-                    case '15':
-                        chill = chill + 1
-                        trainersLegEntMaster.push(j)
-                        break;
-                    case '14':
-                        chill = chill + 1
-                        trainersLegCosmic.push(j)
-                        break;
-                }
-                switch (homeworld) {
-                    case "11":
-                        chill = chill + 1
-                        trainersLegAncient.push(j)
-                        break;
-                    case "12":
-                        chill = chill + 1
-                        trainersLegRelics.push(j)
-                        break;
-                }
-                if (chill === 2) {
-                    trainersLegDouble.push(j)
-                } else if (chill === 3) {
-                    trainersLegTriple.push(j)
-                }
-
-                if (j % 50 === 0) {
-                    loader.BaseLoader = 0
-                    loader.setLoader(parseInt((j / totalSupply * 100).toString()))
-                    setLoading(parseInt((j / totalSupply * 100).toString()))
-                    console.log("loading2 " + j)
-
-                }
-            }
-            setTrainersLeg(trainersLeg)
-            setTrainersLegRelics(trainersLegRelics)
-            setTrainersLegAncient(trainersLegAncient)
-            setTrainersLegEntMystic(trainersLegEntMystic)
-            setTrainersLegEntTheo(trainersLegEntTheo)
-            setTrainersLegEntMaster(trainersLegEntMaster)
-            setTrainersLegCosmic(trainersLegCosmic)
-            setTrainersLegTriple(trainersLegTriple)
-            setTrainersLegDouble(trainersLegDouble)
-            setErrors(errors)
-        }
-        initLeg()
-    }, [])
-
-
-    return (
-        <main>
-            <Helmet>
-                <title>The Old Fanto Lab</title>
-            </Helmet>
-            <h1>The Old Fanto Lab</h1>v0.1.0
+import config from '../../config';
+const IndexPage = () => (
+  <Layout>
+    <section id="banner">
+      <div className="inner">
+        {/*<div className="logo">*/}
+        {/*  <span className="icon fa-diamond"></span>*/}
+        {/*</div>*/}
+        {/*<h2>{config.heading}</h2>*/}
+        {/*<p>{config.subHeading}</p>*/}
+        <p>And while the freshly enlisted trainers were celebrating...</p>
+      </div>
+    </section>
+    <br/><br/><br/>
+    <section id="wrapper">
+      <section id="one" className="wrapper spotlight style1">
+        <div className="inner">
+          {/*<a href="/#" className="image">*/}
+          {/*  <img src={pic1} alt="" />*/}
+          {/*</a>*/}
+          <div className="content">
+            {/*<h2 className="major">Magna arcu feugiat</h2>*/}
             <p>
-                <React.Fragment>
-                    <span>Available trainer list :</span><br/>
-                    All trainers : {trainers ? trainers.toString() : 'loading trainers...'}<br/>
-                    Idle trainers : {trainersIdle ? trainersIdle.toString() : 'loading trainers...'}<br/>
-                    Healing trainers : {trainersHR ? trainersHR.toString() : 'loading trainers...'}<br/>
-                    Journey trainers : {trainersJourney ? trainersJourney.toString() : 'loading trainers...'}<br/>
-                </React.Fragment>
-                {/*<span>{trainers ? trainers.r : 'Loading Trainers...'}</span>*/}
+              Far from there, on a barren planet, near an abandonned old lab...
+                <p>Nothing was happening...</p>
             </p>
-            <br/>
-            <p>
-                Click Enter Journey to send all your IDLE trainers on a Journey.
-                If they have been on a journey less than 12h ago, the transaction will fail and can be rejected when
-                asked.
-                You can immediately leave by clicking the Leave button after the 'Enter' transaction succeeded.
+            {/*<a href="/#" className="special">*/}
+            {/*  Learn more*/}
+            {/*</a>*/}
+          </div>
+        </div>
+      </section>
 
-            </p>
-            <ButtonBatchJourney adr={adr} trainers={trainers} amount={amount}/>
-            <br/>
-            <br/>
-            <p>
-                Leg Total trainers
-                : {trainersLeg ? trainersLeg.length.toString() + " " + trainersLeg.toString() : 'loading trainers...'}<br/>
-                Trainers from Ancient Territories
-                : {trainersLegAncient ? trainersLegAncient.length.toString() + " " + trainersLegAncient.toString() : 'loading trainers...'}<br/>
-                Trainers from Relics Rock
-                : {trainersLegRelics ? trainersLegRelics.length.toString() + " " + trainersLegRelics.toString() : 'loading trainers...'}<br/>
-                Mystic Theorists
-                : {trainersLegEntMystic ? trainersLegEntMystic.length.toString() + " " + trainersLegEntMystic.toString() : 'loading trainers...'}<br/>
-                Ent Theorists
-                : {trainersLegEntTheo ? trainersLegEntTheo.length.toString() + " " + trainersLegEntTheo.toString() : 'loading trainers...'}<br/>
-                Cosmic Explorers
-                : {trainersLegCosmic ? trainersLegCosmic.length.toString() + " " + trainersLegCosmic.toString() : 'loading trainers...'}<br/>
-                Ancient Ent Masters
-                : {trainersLegAncient ? trainersLegAncient.length.toString() + " " + trainersLegAncient.toString() : 'loading trainers...'}<br/><br/>
-                Double Leg Trainers
-                : {trainersLegDouble ? trainersLegDouble.length.toString() + " " + trainersLegDouble.toString() : 'loading trainers...'}<br/>
-                Triple Leg Trainers
-                : {trainersLegTriple ? trainersLegTriple.length.toString() + " " + trainersLegTriple.toString() : 'loading trainers...'}<br/>
-                <br/>
-                loading : {loadingState ? loadingState + "%" : "Récupération des datas en cours."} <br/>
-                {errors ? "Erreur de chargement des données : \n" + errors:""}
-            </p>
-            {/*<ButtonEnterJourney/>*/}
-            {/*<ButtonLeaveJourney/>*/}
-            {/*<h2>The date according to Node.js (TypeScript) is:</h2>*/}
-            {/*<p>{date ? date : 'Loading date...'}</p>*/}
-        </main>
-    );
-}
+      {/*<section id="two" className="wrapper alt spotlight style2">*/}
+      {/*  <div className="inner">*/}
+      {/*    <a href="/#" className="image">*/}
+      {/*      <img src={pic2} alt="" />*/}
+      {/*    </a>*/}
+      {/*    <div className="content">*/}
+      {/*      <h2 className="major">Tempus adipiscing</h2>*/}
+      {/*      <p>*/}
+      {/*        Lorem ipsum dolor sit amet, etiam lorem adipiscing elit. Cras*/}
+      {/*        turpis ante, nullam sit amet turpis non, sollicitudin posuere*/}
+      {/*        urna. Mauris id tellus arcu. Nunc vehicula id nulla dignissim*/}
+      {/*        dapibus. Nullam ultrices, neque et faucibus viverra, ex nulla*/}
+      {/*        cursus.*/}
+      {/*      </p>*/}
+      {/*      <a href="/#" className="special">*/}
+      {/*        Learn more*/}
+      {/*      </a>*/}
+      {/*    </div>*/}
+      {/*  </div>*/}
+      {/*</section>*/}
 
-export default Index;
+      {/*<section id="three" className="wrapper spotlight style3">*/}
+      {/*  <div className="inner">*/}
+      {/*    <a href="/#" className="image">*/}
+      {/*      <img src={pic3} alt="" />*/}
+      {/*    </a>*/}
+      {/*    <div className="content">*/}
+      {/*      <h2 className="major">Nullam dignissim</h2>*/}
+      {/*      <p>*/}
+      {/*        Lorem ipsum dolor sit amet, etiam lorem adipiscing elit. Cras*/}
+      {/*        turpis ante, nullam sit amet turpis non, sollicitudin posuere*/}
+      {/*        urna. Mauris id tellus arcu. Nunc vehicula id nulla dignissim*/}
+      {/*        dapibus. Nullam ultrices, neque et faucibus viverra, ex nulla*/}
+      {/*        cursus.*/}
+      {/*      </p>*/}
+      {/*      <a href="/#" className="special">*/}
+      {/*        Learn more*/}
+      {/*      </a>*/}
+      {/*    </div>*/}
+      {/*  </div>*/}
+      {/*</section>*/}
+
+      <section id="four" className="wrapper alt style1">
+        <div className="inner">
+          <p className="major">Or so they thought...</p>
+          {/*<p>*/}
+          {/*  Cras mattis ante fermentum, malesuada neque vitae, eleifend erat.*/}
+          {/*  Phasellus non pulvinar erat. Fusce tincidunt, nisl eget mattis*/}
+          {/*  egestas, purus ipsum consequat orci, sit amet lobortis lorem lacus*/}
+          {/*  in tellus. Sed ac elementum arcu. Quisque placerat auctor laoreet.*/}
+          {/*</p>*/}
+          {/*<section className="features">*/}
+          {/*  <article>*/}
+          {/*    <a href="/#" className="image">*/}
+          {/*      <img src={pic4} alt="" />*/}
+          {/*    </a>*/}
+          {/*    <h3 className="major">Sed feugiat lorem</h3>*/}
+          {/*    <p>*/}
+          {/*      Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id*/}
+          {/*      nulla dignissim dapibus ultrices.*/}
+          {/*    </p>*/}
+          {/*    <a href="/#" className="special">*/}
+          {/*      Learn more*/}
+          {/*    </a>*/}
+          {/*  </article>*/}
+          {/*  <article>*/}
+          {/*    <a href="/#" className="image">*/}
+          {/*      <img src={pic5} alt="" />*/}
+          {/*    </a>*/}
+          {/*    <h3 className="major">Nisl placerat</h3>*/}
+          {/*    <p>*/}
+          {/*      Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id*/}
+          {/*      nulla dignissim dapibus ultrices.*/}
+          {/*    </p>*/}
+          {/*    <a href="/#" className="special">*/}
+          {/*      Learn more*/}
+          {/*    </a>*/}
+          {/*  </article>*/}
+          {/*  <article>*/}
+          {/*    <a href="/#" className="image">*/}
+          {/*      <img src={pic6} alt="" />*/}
+          {/*    </a>*/}
+          {/*    <h3 className="major">Ante fermentum</h3>*/}
+          {/*    <p>*/}
+          {/*      Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id*/}
+          {/*      nulla dignissim dapibus ultrices.*/}
+          {/*    </p>*/}
+          {/*    <a href="/#" className="special">*/}
+          {/*      Learn more*/}
+          {/*    </a>*/}
+          {/*  </article>*/}
+          {/*  <article>*/}
+          {/*    <a href="/#" className="image">*/}
+          {/*      <img src={pic7} alt="" />*/}
+          {/*    </a>*/}
+          {/*    <h3 className="major">Fusce consequat</h3>*/}
+          {/*    <p>*/}
+          {/*      Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id*/}
+          {/*      nulla dignissim dapibus ultrices.*/}
+          {/*    </p>*/}
+          {/*    <a href="/#" className="special">*/}
+          {/*      Learn more*/}
+          {/*    </a>*/}
+          {/*  </article>*/}
+          {/*</section>*/}
+          {/*<ul className="actions">*/}
+          {/*  <li>*/}
+          {/*    <a href="/#" className="button">*/}
+          {/*      Browse All*/}
+          {/*    </a>*/}
+          {/*  </li>*/}
+          {/*</ul>*/}
+        </div>
+      </section>
+    </section>
+  </Layout>
+);
+
+export default IndexPage;

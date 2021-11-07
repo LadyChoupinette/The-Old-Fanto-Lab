@@ -1,17 +1,26 @@
+const config = require('./config');
+
 module.exports = {
+  pathPrefix: config.pathPrefix,
   siteMetadata: {
-    title: 'Gatsby + Node.js (TypeScript) API',
+    title: config.siteTitle,
   },
   plugins: [
-    `gatsby-plugin-react-helmet`,
+    'gatsby-plugin-react-helmet',
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: 'Gatsby + Node.js (TypeScript) API',
-        short_name: 'Gatsby + Node.js (TypeScript)',
-        start_url: '/',
-        icon: 'src/images/gatsby-icon.png',
+        name: config.manifestName,
+        short_name: config.manifestShortName,
+        start_url: config.pathPrefix || config.manifestStartUrl,
+        background_color: config.manifestBackgroundColor,
+        theme_color: config.manifestThemeColor,
+        display: config.manifestDisplay,
+        icon: config.manifestIcon, // This path is relative to the root of the site.
       },
     },
+    'gatsby-plugin-sass',
+    'gatsby-plugin-offline',
   ],
 };
+

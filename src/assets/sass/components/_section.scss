@@ -1,0 +1,52 @@
+///
+/// Solid State by HTML5 UP
+/// html5up.net | @ajlkn
+/// Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+///
+
+/* Section/Article */
+
+	section, article {
+		&.special {
+			text-align: center;
+		}
+
+	}
+#one {
+	font-family: _font(family-heading);
+	font-size: 1.5em;
+	font-weight: _font(weight-heading);
+	letter-spacing: _font(kern-heading);
+	line-height: 2;
+	text-transform: uppercase;}
+#one:before {
+	height:-2.5em;
+}
+
+#one:after{
+	bottom:-3em;
+}
+
+
+#four {
+	font-family: _font(family-heading);
+	font-size: 2.5em;
+	font-weight: _font(weight-heading);
+	letter-spacing: _font(kern-heading);
+	line-height: 2;
+	text-transform: uppercase;
+
+	.inner{
+		padding:3em 0 0 0;
+		margin-left: 5em;
+		font-size: xxx-large;
+	}
+	&:before{
+		top:-2.3em;
+		height:4em;
+	}
+	&:after{
+		transform: scaleY(-0.3) scaleX(-1);
+		margin-bottom: 2.29em;
+	}
+}
