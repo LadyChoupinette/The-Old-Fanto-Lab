@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { Container } from 'react-bootstrap';
 import { Link } from 'react-scroll';
 import PortfolioContext from '../../context/context';
-import GithubButtons from '../Buttons/ButtonEnterJourney';
+import GithubButtons from 'githubButtons';
 
 import { githubButtons } from '../../mock/data';
 
