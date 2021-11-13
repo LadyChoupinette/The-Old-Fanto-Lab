@@ -93,7 +93,7 @@ const IndexPage = () => (
 
       <section id="four" className="wrapper alt style1">
         <div className="inner">
-          <p className="major">Or so they thought...</p>
+          <p className="major">The tale begins...</p>
           {/*<p>*/}
           {/*  Cras mattis ante fermentum, malesuada neque vitae, eleifend erat.*/}
           {/*  Phasellus non pulvinar erat. Fusce tincidunt, nisl eget mattis*/}
