@@ -23,9 +23,9 @@ export default function SideBar({ fullMenu }) {
           </a>
         </nav>
       </header>
-      <div className={`${headerOpen ? 'is-menu-visible' : ' '}`}>
-        <Nav onMenuToggle={() => toggleHeader(!headerOpen)} />
-      </div>
+      {/*<div className={`${headerOpen ? 'is-menu-visible' : ' '}`}>*/}
+      {/*  <Nav onMenuToggle={() => toggleHeader(!headerOpen)} />*/}
+      {/*</div>*/}
     </>
   );
 }

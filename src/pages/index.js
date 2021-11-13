@@ -2,17 +2,19 @@ import React from 'react';
 import {Link} from 'react-scroll'
 import Layout from '../components/Layout';
 
-import pic1 from '../assets/images/pic01.jpg';
-import pic2 from '../assets/images/pic02.jpg';
-import pic3 from '../assets/images/pic03.jpg';
-import pic4 from '../assets/images/pic04.jpg';
-import pic5 from '../assets/images/pic05.jpg';
-import pic6 from '../assets/images/pic06.jpg';
-import pic7 from '../assets/images/pic07.jpg';
+// import pic1 from '../assets/images/pic01.jpg';
+// import pic2 from '../assets/images/pic02.jpg';
+// import pic3 from '../assets/images/pic03.jpg';
+// import pic4 from '../assets/images/pic04.jpg';
+// import pic5 from '../assets/images/pic05.jpg';
+// import pic6 from '../assets/images/pic06.jpg';
+// import pic7 from '../assets/images/pic07.jpg';
 
-import config from '../../config';
-import {BiDownArrow, IoIosArrowDown} from "react-icons/all";
+// import config from '../../config';
+import {IoIosArrowDown} from "react-icons/all";
+import Journey from "../components/Journey";
 const IndexPage = () => (
+
   <Layout>
     <section id="banner">
       <div className="inner" >
@@ -27,22 +29,21 @@ const IndexPage = () => (
     </section>
     <br/><br/><br/>
     <section id="wrapper">
-      <section id="one" className="wrapper spotlight style1">
-        <div className="inner">
+      <section id="one" className="wrapper spotlight">
+            <Journey/>
           {/*<a href="/#" className="image">*/}
           {/*  <img src={pic1} alt="" />*/}
           {/*</a>*/}
-          <div id='suite' className="content">
-            {/*<h2 className="major">Magna arcu feugiat</h2>*/}
-            <p>
-              Far from there, on a barren planet, near an abandonned old lab...
-                <p>Nothing was happening...</p>
-            </p>
-            {/*<a href="/#" className="special">*/}
-            {/*  Learn more*/}
-            {/*</a>*/}
-          </div>
-        </div>
+          {/*<div id='suite' className="content">*/}
+          {/*  /!*<h2 className="major">Magna arcu feugiat</h2>*!/*/}
+          {/*  <p>*/}
+          {/*    Far from there, on a barren planet, near an abandonned old lab...*/}
+          {/*      <p>Nothing was happening...</p>*/}
+          {/*  </p>*/}
+          {/*  /!*<a href="/#" className="special">*!/*/}
+          {/*  /!*  Learn more*!/*/}
+          {/*  /!*</a>*!/*/}
+          {/*</div>*/}
       </section>
 
       {/*<section id="two" className="wrapper alt spotlight style2">*/}

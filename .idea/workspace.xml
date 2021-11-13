@@ -2,21 +2,57 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f7aa04f2-e5f1-46bf-b8b5-ca80a5dc2409" name="Changes" comment="change name">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/Cold_Landscape.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/Hot_Landscape.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/Hot_Landscape_2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/Ice_Ark.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/Ice_City.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/Ice_Door.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/Lab_Door.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/Lab_Inside_1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/Lab_Inside_2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/Lush_Landscape.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/Plane_Crash.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/Rocky_Landscape.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Journey.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/The-Old-Fanto-Lab.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/The-Old-Fanto-Lab.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/images/DS3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/sass/base/_page.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/sass/base/_page.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/sass/base/_typography.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/sass/base/_typography.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/sass/components/_button.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/sass/components/_button.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/sass/components/_form.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/sass/components/_form.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/assets/sass/components/_section.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/sass/components/_section.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/assets/sass/layout/_banner.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/sass/layout/_banner.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/sass/layout/_footer.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/sass/layout/_footer.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/sass/layout/_header.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/sass/layout/_header.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/sass/layout/_wrapper.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/sass/layout/_wrapper.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/sass/libs/_functions.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/sass/libs/_functions.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/sass/libs/_vars.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/sass/libs/_vars.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Buttons/ButtonBatchJourney.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Buttons/ButtonBatchJourney.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Layout.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Layout.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Sidebar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Sidebar.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/index_old.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index_old.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/abi/abis.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/static/abi/abis.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/js/batchJourney.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/static/js/batchJourney.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/js/getWeb3.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/static/js/getWeb3.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager">
+    <option name="groupingKeys">
+      <option value="directory" />
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -27,7 +63,16 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/../Contract-Deployer/test/sample-test.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../fantomon-journey/LICENSE" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../fantomon-journey/package.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Contract-Deployer/scripts/sample-script.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Contract-Deployer/package.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Contract-Deployer/package-lock.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/package.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Contract-Deployer/tsconfig.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/config.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../gothums/gum.log" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="20av1hXtUWTI4GdfOzAl5Ymh1Lx" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -40,9 +85,14 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../gatsby-absurd" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components" />
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Guibole\Crypto\The-Old-Fanto-Lab\src\components" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="develop" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
@@ -67,8 +117,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.format" />
         <item itemvalue="npm.develop" />
+        <item itemvalue="npm.format" />
         <item itemvalue="npm.format" />
         <item itemvalue="npm.develop" />
         <item itemvalue="npm.develop" />
@@ -114,6 +164,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="change name" />

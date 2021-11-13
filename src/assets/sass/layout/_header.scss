@@ -15,8 +15,9 @@
 		padding: 0 1.25em;
 		position: fixed;
 		top: 0;
-		width: 100%;
+		width: fit-content;
 		z-index: _misc(z-index-base);
+		overflow-x: hidden;
 
 		h1 {
 			@include vendor('transition', (
@@ -45,6 +46,7 @@
 			right: 0.7em;
 			text-transform: uppercase;
 			top: 0.7em;
+			width: fit-content;
 
 			a {
 				border: 0;

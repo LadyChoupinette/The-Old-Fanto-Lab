@@ -8,5 +8,8 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="gothums" />
+    <orderEntry type="module" module-name="Contract-Deployer" />
+    <orderEntry type="module" module-name="fantomon-journey" />
   </component>
 </module>

@@ -6,47 +6,78 @@
 
 /* Section/Article */
 
-	section, article {
-		&.special {
-			text-align: center;
-		}
+section, article {
+  &.special {
+    text-align: center;
+  }
 
-	}
+}
+
 #one {
-	font-family: _font(family-heading);
-	font-size: 1.5em;
-	font-weight: _font(weight-heading);
-	letter-spacing: _font(kern-heading);
-	line-height: 2;
-	text-transform: uppercase;}
+  color: _palette(fg_w);
+  font-family: _font(family-heading);
+  font-size: 1.5em;
+  font-weight: _font(weight-heading);
+  letter-spacing: _font(kern-heading);
+  line-height: 2;
+}
+
 #one:before {
-	height:-2.5em;
+  height: -2.5em;
 }
 
-#one:after{
-	bottom:-3em;
+#one:after {
+  bottom: -3em;
 }
 
+#journey {
+  .inner {
+    text-transform: none;
+    font-size: medium;
+    text-align: center;
+    display: block;
+
+    overflow-wrap: anywhere;
+
+    span {
+      overflow-wrap: anywhere;
+      width: 60em;
+    }
+  }
+}
+
+#buttonsJourney {
+  height: 20em;
+}
+#buttonLeave {
+  padding: 1em;
+}
+
+#labelAmount {
+  font-weight: 100;
+}
 
 #four {
-	font-family: _font(family-heading);
-	font-size: 3.5em;
-	font-weight: 600;
-	letter-spacing: _font(kern-heading);
-	line-height: 2;
-	text-transform: uppercase;
+  font-family: _font(family-heading);
+  font-size: 3.5em;
+  font-weight: 600;
+  letter-spacing: _font(kern-heading);
+  line-height: 2;
+  text-transform: uppercase;
 
-	.inner{
-		padding:3em 0 0 0;
-		margin-left: 5em;
-		font-size: xxx-large;
-	}
-	&:before{
-		top:-2.3em;
-		height:4em;
-	}
-	&:after{
-		transform: scaleY(-0.3) scaleX(-1);
-		margin-bottom: 2.29em;
-	}
+  .inner {
+    padding: 3em 0 0 0;
+    margin-left: 5em;
+    font-size: xxx-large;
+  }
+
+  &:before {
+    top: -2.3em;
+    height: 4em;
+  }
+
+  &:after {
+    transform: scaleY(-0.3) scaleX(-1);
+    margin-bottom: 2.29em;
+  }
 }

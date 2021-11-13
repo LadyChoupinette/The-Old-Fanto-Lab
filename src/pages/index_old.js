@@ -5,7 +5,11 @@ import {ButtonBatchJourney} from "../components/Buttons/ButtonBatchJourney"
 import {abi_Main, adrMain} from "../static/abi/abis";
 // import Web3 from 'web3'
 import {web3} from "../static/js/getWeb3";
+// import web3 from 'react-web3'
 import * as loader from "../../.cache/commonjs/loader";
+
+//TODO set gas limit
+//todo load faster
 
 function Index_old() {
 
@@ -62,6 +66,9 @@ function Index_old() {
                         break;
                     case '4':
                         trainersJourney.push(trainer)
+                        break;
+                    default:
+                        break;
                 }
 
 
@@ -93,57 +100,78 @@ function Index_old() {
             await window.ethereum.enable()
             const contractMain = new web3.eth.Contract(abi_Main, adrMain);
             // console.log(await contractMain.options)
-            const totalSupply = await contractMain.methods.totalSupply().call()
+            const totalSupply = 10000
             // .constantstalSupply().call()
-            for (let j = 0; j < totalSupply; j++) {
+            let jsons = []
+            for (let j = 1; j < totalSupply; j++) {
                 let rarity = "0";
                 let job = "0";
                 let homeworld = "0";
                 try {
-                    rarity = await contractMain.methods.getRarity(j).call()
-                    job = await contractMain.methods.getClass(j).call()
-                    homeworld = await contractMain.methods.getHomeworld(j).call()
+                    let  tokenURI = await contractMain.methods.tokenURI(j).call()
+                    console.log(tokenURI)
+                let maRequete = new Request(tokenURI);
+
+                fetch(maRequete).then(function(tokenURI) {
+                    console.log(tokenURI)
+                return tokenURI.json()
+                }).then(function (jsonToken) {
+                    // console.log(jsonToken)
+                    // console.log(jsonToken.trainerId+" : "+jsonToken.rarity)
+                    jsons.push(jsonToken)
+                })
+                    // rarity = await contractMain.methods.getRarity(j).call()
+                    // job = await contractMain.methods.getClass(j).call()
+                    // homeworld = await contractMain.methods.getHomeworld(j).call()
                 } catch (e) {
-                    errors.push(j)
+                    console.log(e)
+                    // errors.push(j)
+                    j>0 ? j-- : j=0;
+                    console.log(j)
+                    // break;
                 }
-                let chill = 0
-                if (rarity === '3') {
-                    trainersLeg.push(j)
-                    chill = 1
-                }
-                switch (job) {
-                    case '12':
-                        chill = chill + 1
-                        trainersLegEntMystic.push(j)
-                        break;
-                    case '13':
-                        chill = chill + 1
-                        trainersLegEntTheo.push(j)
-                        break;
-                    case '15':
-                        chill = chill + 1
-                        trainersLegEntMaster.push(j)
-                        break;
-                    case '14':
-                        chill = chill + 1
-                        trainersLegCosmic.push(j)
-                        break;
-                }
-                switch (homeworld) {
-                    case "11":
-                        chill = chill + 1
-                        trainersLegAncient.push(j)
-                        break;
-                    case "12":
-                        chill = chill + 1
-                        trainersLegRelics.push(j)
-                        break;
-                }
-                if (chill === 2) {
-                    trainersLegDouble.push(j)
-                } else if (chill === 3) {
-                    trainersLegTriple.push(j)
-                }
+                // let chill = 0
+                // if (rarity === '3') {
+                //     trainersLeg.push(j)
+                //     chill = 1
+                // }
+                // switch (job) {
+                //     case '12':
+                //         chill = chill + 1
+                //         trainersLegEntMystic.push(j)
+                //         break;
+                //     case '13':
+                //         chill = chill + 1
+                //         trainersLegEntTheo.push(j)
+                //         break;
+                //     case '15':
+                //         chill = chill + 1
+                //         trainersLegEntMaster.push(j)
+                //         break;
+                //     case '14':
+                //         chill = chill + 1
+                //         trainersLegCosmic.push(j)
+                //         break;
+                //     default:
+                //         break;
+                // }
+                // switch (homeworld) {
+                //     case "11":
+                //         chill = chill + 1
+                //         trainersLegAncient.push(j)
+                //         break;
+                //     case "12":
+                //         chill = chill + 1
+                //         trainersLegRelics.push(j)
+                //         break;
+                //     default:
+                //         break;
+                // }
+                // if (chill === 2) {
+                //     trainersLegDouble.push(j)
+                // } else if (chill === 3) {
+                //     trainersLegTriple.push(j)
+                // }
 
                 if (j % 50 === 0) {
                     loader.BaseLoader = 0
@@ -153,6 +181,7 @@ function Index_old() {
 
                 }
             }
+            console.log(jsons)
             setTrainersLeg(trainersLeg)
             setTrainersLegRelics(trainersLegRelics)
             setTrainersLegAncient(trainersLegAncient)

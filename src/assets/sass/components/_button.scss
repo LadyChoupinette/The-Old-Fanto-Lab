@@ -6,6 +6,19 @@
 
 /* Button */
 
+#buttonsJourney {
+	button {
+		color: white;
+	}
+}
+NumericInput {
+	color: white;
+	width: 3em;
+}
+#buttonLeave {
+	display: inline-flex;
+}
+
 	input[type="submit"],
 	input[type="reset"],
 	input[type="button"],
@@ -15,9 +28,9 @@
 		@include vendor('transition', 'background-color #{_duration(transition)} ease-in-out');
 		background-color: transparent;
 		border-radius: _size(border-radius);
-		border: 0;
-		box-shadow: inset 0 0 0 2px _palette(border);
-		color: _palette(fg-bold) !important;
+		border: 1px solid white;
+		box-shadow: inset 2px 2px 2px 2px _palette(border);
+		color: _palette(fg-w) !important;
 		cursor: pointer;
 		display: inline-block;
 		font-family: _font(family-heading);
@@ -33,11 +46,11 @@
 		white-space: nowrap;
 
 		&:hover {
-			background-color: _palette(border-bg);
+			background-color: _palette(fg-light);
 		}
 
 		&:active {
-			background-color: _palette(border2-bg);
+			background-color: _palette(fg-light);
 		}
 
 		&.icon {
@@ -48,15 +61,15 @@
 		}
 
 		&.primary {
-			background-color: _palette(accent);
+			background-color: _palette(border-bg);
 			box-shadow: none;
 
 			&:hover {
-				background-color: desaturate(lighten(_palette(accent), 3), 1.5);
+				background-color: desaturate(lighten(_palette(border-bg), 3), 1.5);
 			}
 
 			&:active {
-				background-color: saturate(darken(_palette(accent), 3), 1.5);
+				background-color: saturate(darken(_palette(border-bg), 3), 1.5);
 			}
 
 			&.icon {

@@ -22,8 +22,10 @@
     "react-helmet": "^5.2.1",
     "react-icons": "^4.3.1",
     "react-images": "^1.1.0",
+    "react-numeric-input": "^2.2.3",
     "react-scroll": "^1.8.4",
     "react-scrollspy": "^3.4.2",
+    "react-web3": "^1.2.0",
     "smoothscroll-polyfill": "^0.4.4",
     "web3": "^1.6.0"
   },

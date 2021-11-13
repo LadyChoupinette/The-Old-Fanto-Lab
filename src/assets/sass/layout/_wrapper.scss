@@ -26,6 +26,7 @@
 }
 
 #wrapper {
+  overflow-x: clip;
   > header {
     @include padding(
       7.5em,
@@ -66,7 +67,7 @@
           transparentize(_palette(bg), 0.2),
           transparentize(_palette(bg), 0.2)
         ),
-        url('../images/Red.jpg');
+        url(_image(bg));
 
       background-size: auto, cover;
 

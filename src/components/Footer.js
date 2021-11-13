@@ -48,12 +48,12 @@ export default function Footer() {
           {/*})}*/}
         {/*</div>*/}
         <ul className="icons">
-            <br/><br/><br/><br/><br/>
-          <li><a href='https://www.artstation.com/artwork/EbO0v'>&copy; Artist : Dmitry Vishnevsky  </a></li>
-          <br/><li><a>Do you know an artist ? Contact me on tweeter !</a></li><br/><br/>
             <li><a href="https://twitter.com/TheOldFantoLab" className="icon fa-twitter">
                 <span className="label">Twitter</span>
             </a></li>   <br/><br/><br/><br/><br/><br/><br/>
+            <br/><br/><br/><br/><br/>
+          <li><a href='https://www.deviantart.com/joakimolofsson/gallery'>&copy; Artist : Joakim Olofsson  </a></li>
+          {/*<br/><li><a>Do you know an artist ? Contact me on tweeter !</a></li><br/><br/>*/}
         </ul>
           {/*<ul className="icons">*/}
           {/*    <li><a href="/#" className="icon fa-twitter"><span className="label">Twitter</span></a></li>*/}

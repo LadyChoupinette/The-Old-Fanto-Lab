@@ -4,8 +4,9 @@ import Helmet from 'react-helmet';
 import { StaticQuery, graphql } from 'gatsby';
 
 import '../assets/sass/main.scss';
-import Footer from './Footer';
+import Journey from './Journey';
 import SideBar from './Sidebar';
+import Footer from "./Footer";
 
 class Layout extends Component {
   constructor(props) {
@@ -56,10 +57,11 @@ class Layout extends Component {
               className={isPreloaded ? ' main-body  is-preload' : ' main-body'}
             >
               <div id="page-wrapper">
-                <SideBar fullMenu={fullMenu} />
+                {/*<SideBar fullMenu={fullMenu} />*/}
                 {children}
-                <Footer />
+                {/*<Journey />*/}
               </div>
+                <Footer/>
             </div>
           </>
         )}
