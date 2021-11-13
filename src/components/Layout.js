@@ -57,7 +57,7 @@ class Layout extends Component {
               className={isPreloaded ? ' main-body  is-preload' : ' main-body'}
             >
               <div id="page-wrapper">
-                {/*<SideBar fullMenu={fullMenu} />*/}
+                <SideBar fullMenu={fullMenu} />
                 {children}
                 {/*<Journey />*/}
               </div>

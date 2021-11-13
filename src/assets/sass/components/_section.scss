@@ -30,6 +30,14 @@ section, article {
   bottom: -3em;
 }
 
+#popover-positioned-bottom {
+  color: white;
+}
+
+#top-trainers {
+  display: inline-flex;
+}
+
 #journey {
   .inner {
     text-transform: none;
@@ -39,6 +47,12 @@ section, article {
 
     overflow-wrap: anywhere;
 
+
+
+    button {
+      color: white;
+    }
+
     span {
       overflow-wrap: anywhere;
       width: 60em;
@@ -46,12 +60,8 @@ section, article {
   }
 }
 
-#buttonsJourney {
-  height: 20em;
-}
-#buttonLeave {
-  padding: 1em;
-}
+
+
 
 #labelAmount {
   font-weight: 100;

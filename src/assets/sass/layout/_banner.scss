@@ -50,7 +50,12 @@
     @include vendor('filter', 'blur(0)');
     opacity: 1;
     border-bottom: solid 2px _palette(border);
-    font-size: 2.25em;
+    margin-left: 1em;
+    font-family: monospace;
+    font-size: 3.50em;
+    font-weight: 100;
+    text-align:left ;
+    padding-left: 1em;
     margin-bottom: _size(element-margin) * 0.4;
     padding-bottom: _size(element-margin) * 0.2;
   }
@@ -64,12 +69,15 @@
     @include vendor('transition-delay', '0.8s');
     @include vendor('filter', 'blur(0)');
     opacity: 1;
-    font-family: _font(family-heading);
-    font-size: 3em;
-    font-weight: _font(weight-heading);
+    font-family: 'Source Sans Pro';
+    font-size: 1.5em;
+    font-weight: 600;
     letter-spacing: _font(kern-heading);
+    padding-left: 1.5em;
+    padding-right: 1.5em;
     line-height: 2;
     text-transform: uppercase;
+    text-shadow: 0 0 #0f0f0f;
   }
 
   @include breakpoint('<=large') {

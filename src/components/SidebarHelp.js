@@ -1,30 +1,31 @@
 import React, { useState } from 'react';
 import Nav from './Nav';
 import { Link } from 'gatsby';
-export default function SideBar({ fullMenu }) {
+import NavHelp from "./NavHelp";
+export default function SideBarHelp() {
   const [headerOpen, toggleHeader] = useState(false);
   return (
     <>
-      <header id="header" className={`${fullMenu ? '' : 'alt'}`}>
+      <div id="header" className={`'alt'`}>
         <h1>
           <Link to="/">Solid State</Link>
         </h1>
 
         <nav>
           <a
-            href="#menu"
+            href="#help"
             onClick={e => {
               e.preventDefault();
               toggleHeader(!headerOpen);
             }}
             className="menuToggle"
           >
-            <span>Menu</span>
+            <span>Help</span>
           </a>
         </nav>
-      </header>
+      </div>
       <div className={`${headerOpen ? 'is-menu-visible' : ' '}`}>
-        <Nav onMenuToggle={() => toggleHeader(!headerOpen)} />
+        <NavHelp onMenuToggle={() => toggleHeader(!headerOpen)} />
       </div>
     </>
   );

@@ -26,6 +26,7 @@
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   background: transparentize(_palette(bg), 0.2);
   cursor: default;
+  color: white;
   height: 100%;
   left: 0;
   opacity: 0;
@@ -56,6 +57,7 @@
   h2 {
     border-bottom: solid 2px _palette(border);
     padding-bottom: 1em;
+    color: white;
   }
 
   .close {
@@ -95,9 +97,11 @@
         line-height: 1.85em;
         padding: 0.75em 0;
         text-transform: uppercase;
+        color: white;
 
         &:hover {
-          background: saturate(darken(_palette(accent), 3), 1.5);
+          //background: saturate(darken(_palette(fg-light), 3), 1.5);
+          color: _palette(fg-light);
         }
       }
     }

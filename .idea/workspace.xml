@@ -1,47 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f7aa04f2-e5f1-46bf-b8b5-ca80a5dc2409" name="Changes" comment="change name">
-      <change afterPath="$PROJECT_DIR$/src/assets/images/Cold_Landscape.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/Hot_Landscape.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/Hot_Landscape_2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/Ice_Ark.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/Ice_City.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/Ice_Door.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/Lab_Door.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/Lab_Inside_1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/Lab_Inside_2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/Lush_Landscape.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/Plane_Crash.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/Rocky_Landscape.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Journey.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/The-Old-Fanto-Lab.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/The-Old-Fanto-Lab.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+    <list default="true" id="f7aa04f2-e5f1-46bf-b8b5-ca80a5dc2409" name="Changes" comment="UIv0.1">
+      <change afterPath="$PROJECT_DIR$/src/components/NavHelp.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/SidebarHelp.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/DS3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/sass/base/_page.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/sass/base/_page.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/assets/sass/base/_typography.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/sass/base/_typography.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/assets/sass/components/_button.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/sass/components/_button.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/sass/components/_form.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/sass/components/_form.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/assets/sass/components/_section.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/sass/components/_section.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/assets/sass/layout/_banner.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/sass/layout/_banner.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/sass/layout/_footer.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/sass/layout/_footer.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/assets/sass/layout/_header.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/sass/layout/_header.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/sass/layout/_wrapper.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/sass/layout/_wrapper.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/sass/libs/_functions.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/sass/libs/_functions.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/sass/layout/_menu.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/sass/layout/_menu.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/assets/sass/libs/_vars.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/sass/libs/_vars.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Buttons/ButtonBatchJourney.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Buttons/ButtonBatchJourney.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Journey.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Journey.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Layout.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Layout.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Nav.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Nav.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Sidebar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Sidebar.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/index_old.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index_old.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/static/abi/abis.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/static/abi/abis.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/static/js/batchJourney.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/static/js/batchJourney.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/static/js/getWeb3.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/static/js/getWeb3.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -142,7 +121,14 @@
       <option name="project" value="LOCAL" />
       <updated>1636297437466</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="UIv0.1">
+      <created>1636829588126</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1636829588126</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -168,6 +154,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="change name" />
-    <option name="LAST_COMMIT_MESSAGE" value="change name" />
+    <MESSAGE value="UIv0.1" />
+    <option name="LAST_COMMIT_MESSAGE" value="UIv0.1" />
   </component>
 </project>

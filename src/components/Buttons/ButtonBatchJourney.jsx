@@ -57,6 +57,8 @@ export class ButtonBatchJourney extends React.Component {
                 <button className="button primary" onClick={() => batchEnterJourney(this.props.adr, this.props.trainers, this.state.amount)}>Enter
                     Journey
                 </button><br/>
+                <p>Once you get confirmation that you trainers arrived at their destination, you can order them to leave at once.
+                    Better not stay too long around here...</p>
                 <div id='buttonLeave'><br/>
                 <label>
                     <span id='labelAmount'>
@@ -72,7 +74,7 @@ export class ButtonBatchJourney extends React.Component {
                                           padding: '2px 2.26ex 2px 2px',
                                           borderRadius: '6px 3px 3px 6px',
                                           fontSize: 16,
-                                          width:'6em',
+                                          width:'7em',
                                           marginLeft:'1em',
                                           marginRight: '1em',
                                       },

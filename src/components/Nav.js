@@ -24,7 +24,7 @@ export default function Nav({ onMenuToggle = () => {} }) {
               }}
               to="https://the-old-fanto-lab.vercel.app/"
             >
-              Version de Dev
+              Dev App
             </Link>
           </li>
         </ul>

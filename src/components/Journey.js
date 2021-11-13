@@ -3,6 +3,12 @@ import config from '../../config';
 import {web3} from "../static/js/getWeb3";
 import {abi_Main, adrMain} from "../static/abi/abis";
 import {ButtonBatchJourney} from "./Buttons/ButtonBatchJourney";
+import {OverlayTrigger,Popover,Button} from "react-bootstrap";
+import Nav from "./Nav";
+import NavHelp from "./NavHelp";
+import {Link} from "gatsby";
+import SideBar from "./Sidebar";
+import SideBarHelp from "./SidebarHelp";
 export default function Journey() {
     const [adr, setAdr] = useState(null)
     const [trainers, setTrainers] = useState(null);
@@ -65,28 +71,36 @@ export default function Journey() {
         init();
 
     }, []);
+    // const { children, fullMenu } = this.props;
   return (
     <section id="journey">
       <div className="inner">
-          <p  id="trainerLists">
+          <div id="top-trainers">
+          <p  id="trainerLists" >
               <React.Fragment>
-                  <span>Available trainer list :</span><br/>
+                  <span>Trainer list :</span><br/>
                   {/*<span>All trainers : {trainers ? trainers.toString() : 'loading trainers...'}</span><br/>*/}
-                  <span>Idle trainers : {trainersIdle ? trainersIdle.toString() : 'loading trainers...'}</span><br/>
-                  <span>Healing trainers : {trainersHR ? trainersHR.toString() : 'loading trainers...'}</span><br/>
-                  <span>Journey trainers : {trainersJourney ? trainersJourney.toString() : 'loading trainers...'}</span><br/>
+                  <span>Idle trainers : {trainersIdle ? trainersIdle.length.toString() : 'loading trainers...'}</span><br/>
+                  {/*<span>Healing trainers : {trainersHR ? trainersHR.length.toString() : 'loading trainers...'}</span><br/>*/}
+                  <span>Journey trainers : {trainersJourney ? trainersJourney.length.toString() : 'loading trainers...'}</span><br/>
               </React.Fragment>
               {/*<span>{trainers ? trainers.r : 'Loading Trainers...'}</span>*/}
           </p>
+          {/*<p className='col-6'>*/}
+              {/*<SideBarHelp />*/}
+          {/*</p>*/}
+          </div>
           <br/>
           <p>
-              Click Enter Journey to send all your IDLE trainers on a Journey.
-              If they have been on a journey less than 12h ago, the transaction will fail and can be rejected when
-              asked.
-              You can immediately leave by clicking the Leave button after the 'Enter' transaction succeeded.
+              You can send your trainer on a journey around the old lab. Who knows, they might find some answer about this place ! But be careful,
+              the harsh weather and the lurking creatures are not to be taken lightly...
+              {/*Click Enter Journey to send all your IDLE trainers on a Journey.*/}
+              {/*If they have been on a journey less than 12h ago, the transaction will fail and can be rejected when*/}
+              {/*asked.*/}
+              {/*You can immediately leave by clicking the Leave button after the 'Enter' transaction succeeded.*/}
 
           </p>
-          <ButtonBatchJourney adr={adr} trainers={trainers} amount={amount}/>
+          <ButtonBatchJourney adr={adr} trainers={trainers} amount={amount}/><br/>
       </div>
     </section>
   );
