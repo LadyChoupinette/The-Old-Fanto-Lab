@@ -475,7 +475,8 @@ export const abi_Main = [{
     "type": "function"
 }, {"inputs": [], "name": "withdraw", "outputs": [], "stateMutability": "nonpayable", "type": "function"}]
 
-export const adrTOFL = '0x9306e24616838c981251c4d64Af2B926DB3f2625';
+export const adrTOFLOld = '0x9306e24616838c981251c4d64Af2B926DB3f2625';
+export const adrTOFL = '0x210382820b7eb3d4bf551ce60083b0181f8e319c';
 export const adrMain = '0x4F46C9D58c9736fe0f0DB5494Cf285E995c17397';
 // let web3 = new Web3(web3.currentProvider)
 // export let contractMain =  new web3.eth.Contract(abi_Main, adrMain);

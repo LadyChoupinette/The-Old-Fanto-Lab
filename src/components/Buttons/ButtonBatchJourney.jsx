@@ -8,24 +8,18 @@ export class ButtonBatchJourney extends React.Component {
 
     constructor() {
         super();
-        // this.setState({amount: amount});
         this.state={
             amount:1,
         }
-        // this.handleChange = this.handleChange.bind(this);
-        // this.handleSubmit = this.handleSubmit.bind(this);
     }
 
     amountChange(amount) {
 
-        // this.amount=event.target.value
         console.log(amount)
         console.log(this)
-        // window.amount = event.target.value
         this.setState({
             ['amount']: amount
         });
-        // this.state.amount = event.target.value;
     }
     onInputchange(event) {
         this.setState({
@@ -64,8 +58,6 @@ export class ButtonBatchJourney extends React.Component {
                     <span id='labelAmount'>
                     Tip (for Dev)
                         </span>
-                    {/*<input type='number' id='amount' name='amount' value={this.state.amount} onChange={(e)=>this.amountChange(e)}/>*/}
-                    {/**/}
                     <NumericInput precision={2} value={this.state.amount} step={0.1} format={this.myFormat} onChange={(e)=>this.amountChange(e)}
                                   style={{
                                       wrap: {
