@@ -8,7 +8,11 @@ import Nav from "./Nav";
 import NavHelp from "./NavHelp";
 import {Link} from "gatsby";
 import SideBar from "./Sidebar";
+import AutorenewIcon from '@mui/icons-material/Autorenew';
 import SideBarHelp from "./SidebarHelp";
+import {RefreshOutlined} from "@mui/icons-material";
+import HelpOutlineOutlinedIcon from '@mui/icons-material/HelpOutlineOutlined';
+import {Fab, Tooltip} from "@mui/material";
 export default function Journey() {
     const [adr, setAdr] = useState(null)
     const [trainers, setTrainers] = useState(null);
@@ -19,18 +23,24 @@ export default function Journey() {
 
     const [amount, setAmount] = useState(1);
 
+    const help = `Remove your trainers from any Healing Rift or Arena, so they are 'Watching Anime'. Their number is the number of idle trainer. Click Journey
+    to send them on a journey. If nothing happens or if the transaction is very overpriced, make sure you haven't done any journey for the past 12h, 
+    and refresh the page. 
+    Once all trainers sent, click the refresh button, or press F5, your trainers will now be counter as "Journey Trainer", and their status will be "Lost".
+     You can immediately leave the journey to win 1 courage. There is currently no benefits to stay on a journey.
+    `
 
-    useEffect(() => {
+
+
         const init = async () => {
-
+            setTrainersIdle(null)
+            setTrainersJourney(null)
             try {
                 await window.ethereum.enable()
             } catch{}
 
-            // let web3 = new Web3(window.ethereum)
             let acc = await web3.eth.getAccounts();
             let adr = acc[0]
-            console.log(adr)
 
             const contractMain = new web3.eth.Contract(abi_Main, adrMain);
 
@@ -63,13 +73,14 @@ export default function Journey() {
 
             }
 
-            console.log(trainerList)
+            console.log(trainersIdle)
             setTrainers(trainerList);
             setTrainersIdle(trainersIdle);
             setTrainersHR(trainersHR);
             setTrainersJourney(trainersJourney);
             setAdr(adr);
         };
+    useEffect(() => {
         init();
 
     }, []);
@@ -79,23 +90,32 @@ export default function Journey() {
       <div className="inner">
           <div id="top-trainers">
           <p  id="trainerLists" >
-              <React.Fragment>
-                  <span>Trainer list :</span><br/>
+              {/*<React.Fragment>*/}
+                  <h3>Trainer list</h3>
                   {/*<span>All trainers : {trainers ? trainers.toString() : 'loading trainers...'}</span><br/>*/}
                   <span>Idle trainers : {trainersIdle ? trainersIdle.length.toString() : 'loading trainers...'}</span><br/>
                   {/*<span>Healing trainers : {trainersHR ? trainersHR.length.toString() : 'loading trainers...'}</span><br/>*/}
                   <span>Journey trainers : {trainersJourney ? trainersJourney.length.toString() : 'loading trainers...'}</span><br/>
-              </React.Fragment>
+              {/*</React.Fragment>*/}
               {/*<span>{trainers ? trainers.r : 'Loading Trainers...'}</span>*/}
           </p>
-          {/*<p className='col-6'>*/}
-              {/*<SideBarHelp />*/}
-          {/*</p>*/}
+          <p className='div-icon'>
+              <Tooltip title={help} placement="right">
+                  <HelpOutlineOutlinedIcon fontSize="large" className="trainer-icon-help" />
+              </Tooltip>
+              <br/>
+              <Fab size="small" disableTouchRipple="true" className="trainer-icon-refresh" aria-label="refresh" onClick={init}>
+              <RefreshOutlined fontSize="large" />
+              </Fab>
+
+
+
+          </p>
           </div>
           <br/>
           <p>
-              You can send your trainer on a journey around the old lab. Who knows, they might find some answer about this place ! But be careful,
-              the harsh weather and the lurking creatures are not to be taken lightly...
+              You can send your trainers on a journey around the old lab. Who knows, they might find something interesting about this place ! Be careful though,
+              with the melting of snow, you can hear more wild creatures than ever before...
               {/*Click Enter Journey to send all your IDLE trainers on a Journey.*/}
               {/*If they have been on a journey less than 12h ago, the transaction will fail and can be rejected when*/}
               {/*asked.*/}

@@ -25,10 +25,12 @@ const IndexPage = () => (
         {/*</div>*/}
         <h2>{config.heading}</h2>
         {/*<p>{config.subHeading}</p>*/}
-        <p>Far away, on a distant planet, the old fanto lab starts running again. Tales of the treasures and mysteries
-            it harbours start spreading accross the galaxy. Some also talk about its danger... The truth about this lab and its planet remains to be discovered...</p>
+        <p>Far away, on a distant planet, the old fanto lab runs again. The end of winter makes it quite easier to navigate around.<br/>
+            Surely you will find something around here to help you on your quest... Perhaps even a way to enter inside ?</p>
       </div>
-        <Link id ='arrow' to='one' smooth={true}><IoIosArrowDown/></Link>
+        <div id="arrow">
+        <Link  to='one' smooth={true}><IoIosArrowDown/></Link>
+        </div>
     </section>
     <br/><br/><br/>
     <section id="wrapper">
@@ -38,7 +40,7 @@ const IndexPage = () => (
 
       <section id="four" className="wrapper alt style1">
         <div className="inner">
-          <p className="major">The tale begins...</p>
+          <p className="major">The Old scientist must be somewhere nearby...</p>
         </div>
       </section>
     </section>

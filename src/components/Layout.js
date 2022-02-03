@@ -7,6 +7,7 @@ import '../assets/sass/main.scss';
 import Journey from './Journey';
 import SideBar from './Sidebar';
 import Footer from "./Footer";
+import SideBarHelp from "./SidebarHelp";
 
 class Layout extends Component {
   constructor(props) {
@@ -47,7 +48,7 @@ class Layout extends Component {
             <Helmet
               title={data.site.siteMetadata.title}
               meta={[
-                { name: 'description', content: 'Solid State' },
+                { name: 'description', content: 'The Old Fanto-Lab' },
                 { name: 'keywords', content: 'site, web' },
               ]}
             >
@@ -58,6 +59,7 @@ class Layout extends Component {
             >
               <div id="page-wrapper">
                 <SideBar fullMenu={fullMenu} />
+                  {/*<SideBarHelp fullMenu={fullMenu} />*/}
                 {children}
                 {/*<Journey />*/}
               </div>

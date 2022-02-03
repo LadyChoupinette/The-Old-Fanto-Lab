@@ -1,6 +1,6 @@
 module.exports = {
   siteTitle: 'The Old Fanto Lab', // <title>
-  manifestName: 'SolidState',
+  manifestName: 'TheOldFantoLab',
   manifestShortName: 'Old Lab', // max 12 characters
   manifestStartUrl: '/',
   manifestBackgroundColor: '#000000',
