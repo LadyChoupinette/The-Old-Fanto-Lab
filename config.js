@@ -1,4 +1,9 @@
 module.exports = {
+  node: {
+    Buffer: false,
+    process: false,
+  },
+  mode: 'production',
   siteTitle: 'The Old Fanto Lab', // <title>
   manifestName: 'SolidState',
   manifestShortName: 'Old Lab', // max 12 characters
@@ -17,5 +22,5 @@ module.exports = {
       name: 'Twitter',
       url: 'https://twitter.com/TheOldFantoLab',
     },
-  ]
+  ],
 };
