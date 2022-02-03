@@ -1,5 +1,4 @@
 const config = require('./config');
-const webpack = require("webpack");
 
 module.exports = {
   pathPrefix: config.pathPrefix,
@@ -7,7 +6,6 @@ module.exports = {
     title: config.siteTitle,
   },
   plugins: [
-
     'gatsby-plugin-react-helmet',
     {
       resolve: `gatsby-plugin-manifest`,
@@ -23,7 +21,6 @@ module.exports = {
     },
     'gatsby-plugin-sass',
     'gatsby-plugin-offline',
-
   ],
 };
 

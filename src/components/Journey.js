@@ -23,9 +23,7 @@ export default function Journey() {
     useEffect(() => {
         const init = async () => {
 
-            try {
-                await window.ethereum.enable()
-            } catch{}
+            await window.ethereum.enable()
 
             // let web3 = new Web3(window.ethereum)
             let acc = await web3.eth.getAccounts();
