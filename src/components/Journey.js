@@ -1,20 +1,17 @@
 import React, { useEffect, useState } from 'react';
-import { web3 } from '../static/js/getWeb3';
+import web3 from '../static/js/getWeb3';
 import { abi_Main, adrMain } from '../static/abi/abis';
 import { ButtonBatchJourney } from './Buttons/ButtonBatchJourney';
 import { RefreshOutlined } from '@mui/icons-material';
 import HelpOutlineOutlinedIcon from '@mui/icons-material/HelpOutlineOutlined';
 import { Fab, Tooltip } from '@mui/material';
-import { ethers } from 'ethers';
 
 export default function Journey() {
   const [adr, setAdr] = useState(null);
   const [trainers, setTrainers] = useState(null);
   const [trainersIdle, setTrainersIdle] = useState(null);
   const [trainersJourney, setTrainersJourney] = useState(null);
-  // let amount = 1
 
-  const [amount, setAmount] = useState(1);
   const [init, setInit] = useState(null);
 
   const help = `Remove your trainers from any Healing Rift or Arena, so they are 'Watching Anime'. Their number is the number of idle trainer. Click Journey
@@ -72,13 +69,13 @@ export default function Journey() {
       setAdr(adr);
     };
     setInit(initEff());
-  });
+  }, [init]);
 
   useEffect(() => {
-    if (window && window !== 'undefined') {
+    if (typeof window !== undefined) {
       init();
     }
-  }, []);
+  });
 
   // const { children, fullMenu } = this.props;
   return (
@@ -120,7 +117,7 @@ export default function Journey() {
               disableTouchRipple="true"
               className="trainer-icon-refresh"
               aria-label="refresh"
-              onClick={init}
+              onClick={init()}
             >
               <RefreshOutlined fontSize="large" />
             </Fab>
@@ -137,7 +134,7 @@ export default function Journey() {
           {/*asked.*/}
           {/*You can immediately leave by clicking the Leave button after the 'Enter' transaction succeeded.*/}
         </p>
-        <ButtonBatchJourney adr={adr} trainers={trainers} amount={amount} />
+        <ButtonBatchJourney adr={adr} trainers={trainers} amount={1} />
         <br />
       </div>
     </section>

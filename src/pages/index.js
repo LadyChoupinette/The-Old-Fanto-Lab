@@ -4,7 +4,7 @@ import config from '../../config';
 import Journey from '../components/Journey';
 const IndexPage = () => (
   // <Web3Provider></Web3Provider>
-  <Layout fullMenu={false}>
+  <Layout>
     <section id="banner">
       <div className="inner">
         {/*<div className="logo">*/}

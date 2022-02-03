@@ -1,5 +1,4 @@
 const config = require('./config');
-const webpack = require("webpack");
 
 module.exports = {
   pathPrefix: config.pathPrefix,

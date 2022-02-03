@@ -1,6 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import Helmet from 'react-helmet';
+import { Helmet } from 'react-helmet';
 
 import '../assets/sass/main.scss';
 import SideBar from './Sidebar';
@@ -27,7 +26,7 @@ class Layout extends React.Component {
   }
 
   render() {
-    const { children, fullMenu } = this.props;
+    const { children } = this.props;
     const { isPreloaded } = this.state;
     return data => (
       <>
@@ -42,7 +41,7 @@ class Layout extends React.Component {
         </Helmet>
         <div className={isPreloaded ? ' main-body  is-preload' : ' main-body'}>
           <div id="page-wrapper">
-            <SideBar fullMenu={fullMenu} />
+            <SideBar fullMenu={false} />
             {/*<SideBarHelp fullMenu={fullMenu} />*/}
             {children}
             {/*<Journey />*/}
@@ -54,8 +53,8 @@ class Layout extends React.Component {
   }
 }
 
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
-};
+// Layout.propTypes = {
+//   children: PropTypes.node.isRequired,
+// };
 
 export default Layout;
