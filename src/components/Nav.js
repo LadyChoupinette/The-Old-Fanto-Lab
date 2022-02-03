@@ -17,7 +17,7 @@ class Nav extends React.Component {
           <ul className="links">
             <li>
               <Link
-                onClick={ => {
+                onClick={() => {
                   this.state.onMenuToggle();
                 }}
                 to="/"
