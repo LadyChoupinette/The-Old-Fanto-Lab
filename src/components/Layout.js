@@ -1,15 +1,13 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import { StaticQuery, graphql } from 'gatsby';
 
 import '../assets/sass/main.scss';
-import Journey from './Journey';
 import SideBar from './Sidebar';
-import Footer from "./Footer";
-import SideBarHelp from "./SidebarHelp";
+import Footer from './Footer';
 
-class Layout extends Component {
+class Layout extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -59,11 +57,11 @@ class Layout extends Component {
             >
               <div id="page-wrapper">
                 <SideBar fullMenu={fullMenu} />
-                  {/*<SideBarHelp fullMenu={fullMenu} />*/}
+                {/*<SideBarHelp fullMenu={fullMenu} />*/}
                 {children}
                 {/*<Journey />*/}
               </div>
-                <Footer/>
+              <Footer />
             </div>
           </>
         )}

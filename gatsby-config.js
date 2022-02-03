@@ -7,7 +7,6 @@ module.exports = {
     title: config.siteTitle,
   },
   plugins: [
-
     'gatsby-plugin-react-helmet',
     {
       resolve: `gatsby-plugin-manifest`,
@@ -23,7 +22,5 @@ module.exports = {
     },
     'gatsby-plugin-sass',
     'gatsby-plugin-offline',
-
   ],
 };
-
