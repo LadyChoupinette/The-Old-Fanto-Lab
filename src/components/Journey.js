@@ -34,6 +34,7 @@ export default function Journey() {
       console.log(web3, web3);
       const w3 = await web3;
       console.log(w3);
+      console.log(web3.eth.accounts);
       const acc = await web3.eth.getAccounts();
 
       adr = acc[0];
