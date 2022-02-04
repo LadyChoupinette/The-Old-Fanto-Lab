@@ -30,10 +30,8 @@ export default function Journey() {
       setTrainersIdle(null);
       setTrainersJourney(null);
 
-      console.log(web3, web3);
       const w3 = await web3;
       console.log(w3);
-      console.log(w3.eth.accounts);
       const acc = await w3.eth.getAccounts();
 
       const adr = acc[0];

@@ -20,7 +20,9 @@ export async function batchEnterJourney(adr, ids, amount) {
     if (status === '0') {
       let reqEnter = await contractMain.methods
         .enterJourney(parseInt(ids[trainer]), contractTOFL.options.address, [])
-        .send.request({ from: adr }, (err, res) => console.log(err, res));
+        .send.request({ from: adr, gasLimit: 100000 }, (err, res) =>
+          console.log(err, res)
+        );
       console.log(reqEnter);
       batch.add(reqEnter);
       // contractTOFL.setDefaultAccount(adrTOFL);
@@ -57,6 +59,7 @@ export async function batchLeaveJourney(adr, ids, amount) {
       let reqLeave = await contractTOFL.methods
         .leave(parseInt(ids[trainer]))
         .send.request({
+          gasLimit: 100000,
           value: w3.utils.toWei(amount.toString()),
           from: adr,
         });
