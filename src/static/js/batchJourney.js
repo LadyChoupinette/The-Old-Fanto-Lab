@@ -4,11 +4,12 @@ import web3 from './getWeb3';
 export async function batchEnterJourney(adr, ids, amount) {
   console.log(ids);
   console.log(amount);
-  console.log(web3);
+  const w3 = await web3;
+  console.log(w3);
 
-  let batch = new web3.eth.BatchRequest();
-  const contractMain = new web3.eth.Contract(abi_Main, adrMain);
-  const contractTOFL = new web3.eth.Contract(abi_TOFL, adrTOFL);
+  let batch = new w3.eth.BatchRequest();
+  const contractMain = new w3.eth.Contract(abi_Main, adrMain);
+  const contractTOFL = new w3.eth.Contract(abi_TOFL, adrTOFL);
 
   for (let trainer in ids) {
     console.log(parseInt(ids[trainer]));
@@ -41,9 +42,10 @@ export async function batchEnterJourney(adr, ids, amount) {
 }
 
 export async function batchLeaveJourney(adr, ids, amount) {
-  let batch = new web3.eth.BatchRequest();
-  const contractMain = new web3.eth.Contract(abi_Main, adrMain);
-  const contractTOFL = new web3.eth.Contract(abi_TOFL, adrTOFL);
+  const w3 = await web3;
+  let batch = new w3.eth.BatchRequest();
+  const contractMain = new w3.eth.Contract(abi_Main, adrMain);
+  const contractTOFL = new w3.eth.Contract(abi_TOFL, adrTOFL);
 
   for (let trainer in ids) {
     console.log(parseInt(ids[trainer]));
@@ -55,7 +57,7 @@ export async function batchLeaveJourney(adr, ids, amount) {
       let reqLeave = await contractTOFL.methods
         .leave(parseInt(ids[trainer]))
         .send.request({
-          value: web3.utils.toWei(amount.toString()),
+          value: w3.utils.toWei(amount.toString()),
           from: adr,
         });
       console.log(reqLeave);
