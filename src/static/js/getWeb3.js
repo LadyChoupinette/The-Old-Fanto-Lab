@@ -1,7 +1,7 @@
 import Web3 from 'web3';
 
 const web3Get = function() {
-  if (typeof window !== undefined) {
+  if (typeof window !== 'undefined') {
     return new Web3(window.ethereum);
   } else {
     return null;
