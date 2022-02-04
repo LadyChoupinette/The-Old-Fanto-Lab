@@ -2,7 +2,6 @@ import Web3 from 'web3';
 
 const web3Get = async function() {
   console.log('hey');
-  await window.ethereum.enable();
   return new Web3(window.ethereum);
 };
 const web3 = await web3Get();
