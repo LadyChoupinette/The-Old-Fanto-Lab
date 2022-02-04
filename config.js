@@ -1,18 +1,17 @@
 module.exports = {
   node: {
-    Buffer: false,
-    process: false,
+    Buffer: true,
+    process: true,
   },
   mode: 'production',
   siteTitle: 'The Old Fanto Lab', // <title>
-  manifestName: 'SolidState',
+  manifestName: 'TheOldFantoLab',
   manifestShortName: 'Old Lab', // max 12 characters
   manifestStartUrl: '/',
   manifestBackgroundColor: '#000000',
   manifestThemeColor: '#000000',
   manifestDisplay: 'standalone',
   manifestIcon: 'src/assets/img/website-icon.png',
-  pathPrefix: `/gatsby-starter-solidstate/`, // This path is subpath of your hosting https://domain/portfolio
   heading: 'The Old Fanto-Lab',
   subHeading: 'Lost, on a barren planet...',
   // social

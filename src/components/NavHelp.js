@@ -3,10 +3,31 @@ import { Link } from 'gatsby';
 
 export default function NavHelp({ onMenuToggle = () => {} }) {
   return (
-    <nav id="help">
+    <nav id="menu">
       <div className="inner">
         <h2>Help</h2>
-        blablablablelblaelbzllelrtgrfsred
+        <ul className="links">
+          <li>
+            <Link
+              onClick={() => {
+                onMenuToggle();
+              }}
+              to="/"
+            >
+              Help
+            </Link>
+          </li>
+          <li>
+            <Link
+              onClick={() => {
+                onMenuToggle();
+              }}
+              to="https://the-old-fanto-lab.vercel.app/"
+            >
+              About
+            </Link>
+          </li>
+        </ul>
         <a
           className="close"
           onClick={e => {

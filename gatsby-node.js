@@ -4,6 +4,7 @@
  * See: https://www.gatsbyjs.org/docs/node-apis/
  */
 
+const webpack = require('webpack');
 exports.onCreateWebpackConfig = ({
   stage,
   rules,
@@ -21,6 +22,7 @@ exports.onCreateWebpackConfig = ({
         https: require.resolve('https-browserify'),
         url: require.resolve('url/'),
         os: require.resolve('os-browserify/browser'),
+        Buffer: require.resolve('Buffer'),
       },
     },
     module: {
@@ -42,6 +44,10 @@ exports.onCreateWebpackConfig = ({
       ],
     },
     plugins: [
+      new webpack.ProvidePlugin({
+        process: 'process/browser',
+        Buffer: ['buffer', 'Buffer'],
+      }),
       plugins.define({
         __DEVELOPMENT__: stage === `develop` || stage === `develop-html`,
       }),

@@ -6,11 +6,15 @@
 
 /* Wrapper */
 
-/// Sets the colors of the wrapper's top/bottom edges.
-/// @param {string} $color Color.
+#page-wrapper{
+  background: linear-gradient(to top, rgba(172, 173, 129, 0.76), transparent);
+}
+
 @mixin wrapper-edges-color($color: black) {
   &:before,
   &:after {
+/// Sets the colors of the wrapper's top/bottom edges.
+/// @param {string} $color Color.
     background-image: svg-url(
       '<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" preserveAspectRatio="none"><polygon points="0,100 100,0 100,100" style="fill:#{$color};" /></svg>'
     );
@@ -25,8 +29,10 @@
   }
 }
 
+
 #wrapper {
   overflow-x: clip;
+
   > header {
     @include padding(
       7.5em,
@@ -37,6 +43,10 @@
     .inner {
       margin: 0 auto;
       width: _size(inner);
+    }
+
+    #arrow{
+      text-align: center;
     }
 
     h2 {
@@ -55,6 +65,26 @@
       text-transform: uppercase;
     }
   }
+
+  .div-icon{
+    margin-left: 2em;
+  }
+
+  .trainer-icon-help{
+    margin-bottom: 0.5em;
+  }
+  .fab-refresh{
+    background-color: transparent;
+  }
+  .trainer-icon-refresh{
+    cursor: pointer;
+      background-color: transparent;
+    //margin-bottom: 0.5em;
+    &:hover{
+      background-color: rgba(128, 128, 128, 0.25);
+    }
+  }
+
 
   @include breakpoint('<=large') {
     > header {
