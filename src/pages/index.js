@@ -1,5 +1,9 @@
 import React from 'react';
-import Layout from '../components/Layout';
+import loadable from '@loadable/component';
+
+const Layout = loadable(() => import('../components/Layout'));
+// const Journey = loadable(() => import('../components/Layout'));
+// import Layout from '../components/Layout';
 import config from '../../config';
 import Journey from '../components/Journey';
 class Index extends React.Component {
