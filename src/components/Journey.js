@@ -34,13 +34,13 @@ export default function Journey() {
       console.log(web3, web3);
       const w3 = await web3;
       console.log(w3);
-      console.log(web3.eth.accounts);
-      const acc = await web3.eth.getAccounts();
+      console.log(w3.eth.accounts);
+      const acc = await w3.eth.getAccounts();
 
       adr = acc[0];
       console.log(adr);
 
-      const contractMain = new web3.eth.Contract(abi_Main, adrMain);
+      const contractMain = new w3.eth.Contract(abi_Main, adrMain);
 
       let num = 0;
       try {
