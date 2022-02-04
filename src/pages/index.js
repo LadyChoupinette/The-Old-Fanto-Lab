@@ -2,7 +2,7 @@ import React from 'react';
 import loadable from '@loadable/component';
 
 // const Layout = loadable(() => import('../components/Layout'));
-const Journey = loadable(() => import('../components/Layout'));
+const Journey = loadable(() => import('../components/Journey'));
 import Layout from '../components/Layout';
 import config from '../../config';
 // import Journey from '../components/Journey';
