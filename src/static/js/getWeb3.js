@@ -2,7 +2,7 @@ import Web3 from 'web3';
 
 const web3 = async function() {
   console.log('hey');
-  await window.ethereum.sendAsync('eth_requestAccounts');
+  await window.ethereum.request({ method: 'eth_requestAccounts' });
   return new Web3(window.ethereum);
 };
 
