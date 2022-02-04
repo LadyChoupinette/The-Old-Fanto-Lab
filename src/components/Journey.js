@@ -4,8 +4,6 @@ import { ButtonBatchJourney } from './Buttons/ButtonBatchJourney';
 import { RefreshOutlined } from '@mui/icons-material';
 import HelpOutlineOutlinedIcon from '@mui/icons-material/HelpOutlineOutlined';
 import { Fab, Tooltip } from '@mui/material';
-// import loadable from '@loadable/component';
-// const web3 = loadable(() => import('../static/js/getWeb3'));
 import web3 from '../static/js/getWeb3';
 
 export default function Journey() {
@@ -36,7 +34,9 @@ export default function Journey() {
       let acc;
       try {
         acc = await web3.eth.getAccounts();
-      } catch {}
+      } catch (e) {
+        console.log(e.toString());
+      }
 
       adr = acc[0];
       console.log(adr);
@@ -46,7 +46,9 @@ export default function Journey() {
       let num = 0;
       try {
         num = await contractMain.methods.balanceOf(adr).call();
-      } catch {}
+      } catch (e) {
+        console.log(e.toString());
+      }
       let trainerList = [];
       let trainer;
       let trainersIdle = [];
@@ -59,7 +61,9 @@ export default function Journey() {
             .call();
           trainerList.push(trainer);
           status = await contractMain.methods.getStatus(trainer).call();
-        } catch (e) {}
+        } catch (e) {
+          console.log(e.toString());
+        }
 
         switch (status) {
           case '0':
@@ -81,10 +85,11 @@ export default function Journey() {
       setTrainersJourney(trainersJourney);
       setAdr(adr);
     };
-    if (typeof window !== undefined) {
-      init();
-    }
+    // if (typeof window !== undefined) {
+    init();
+    // }
   }, [init]);
+  refresh();
 
   // useEffect(() => {
   //   if (typeof window !== undefined) {
