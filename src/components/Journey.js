@@ -15,10 +15,11 @@ export default function Journey() {
   const [init, setInit] = useState(true);
 
   const help = `Remove your trainers from any Healing Rift or Arena, so they are 'Watching Anime'. Their number is the number of idle trainer. Click Journey
-    to send them on a journey. If nothing happens or if the transaction is very overpriced, make sure you haven't done any journey for the past 12h, 
+    to send them on a journey. If nothing happens, the gas cost is zero or if the transaction is very overpriced, make sure you haven't done any journey for the past 12h, 
     and refresh the page. 
     Once all trainers sent, click the refresh button, or press F5, your trainers will now be counter as "Journey Trainer", and their status will be "Lost".
-     You can immediately leave the journey to win 1 courage. There is currently no benefits to stay on a journey.
+     You can immediately leave the journey to win 1 courage. There is currently no benefits to stay on a journey, so please, get them back. 
+     Also please, do not disturb any tublix.
     `;
 
   let refresh = () => {
