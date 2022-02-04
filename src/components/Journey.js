@@ -6,7 +6,7 @@ import HelpOutlineOutlinedIcon from '@mui/icons-material/HelpOutlineOutlined';
 import { Fab, Tooltip } from '@mui/material';
 import web3 from '../static/js/getWeb3';
 
-export default function Journey() {
+export default function Journey(props) {
   const [adr, setAdr] = useState(null);
   const [trainers, setTrainers] = useState(null);
   const [trainersIdle, setTrainersIdle] = useState(null);
@@ -31,7 +31,9 @@ export default function Journey() {
       setTrainersJourney(null);
 
       let adr;
-      const acc = await web3.eth.getAccounts();
+      console.log(props.ctx.selectedAccount);
+      console.log(await web3);
+      const acc = await web3.eth.accounts;
 
       adr = acc[0];
       console.log(adr);

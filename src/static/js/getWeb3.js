@@ -7,6 +7,16 @@ const web3 = async function() {
 };
 
 export default web3();
+//
+// import Eth from 'ethers';
+//
+// const eth = async function() {
+//   console.log('hey');
+//   await ethereum.sendAsync('eth_requestAccounts');
+//   return new Eth(ethereum);
+// };
+//
+// export default web3();
 
 // export const connectWallet = async () => {
 //   if (window.ethereum) {
