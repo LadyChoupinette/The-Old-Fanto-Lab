@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import web3 from '../static/js/getWeb3';
 import { abi_Main, adrMain } from '../static/abi/abis';
 import { ButtonBatchJourney } from './Buttons/ButtonBatchJourney';
 import { RefreshOutlined } from '@mui/icons-material';
 import HelpOutlineOutlinedIcon from '@mui/icons-material/HelpOutlineOutlined';
 import { Fab, Tooltip } from '@mui/material';
+import web3 from '../static/js/getWeb3';
 
 export default function Journey() {
   const [adr, setAdr] = useState(null);
@@ -12,7 +12,7 @@ export default function Journey() {
   const [trainersIdle, setTrainersIdle] = useState(null);
   const [trainersJourney, setTrainersJourney] = useState(null);
 
-  const [init, setInit] = useState(null);
+  const [init, setInit] = useState(true);
 
   const help = `Remove your trainers from any Healing Rift or Arena, so they are 'Watching Anime'. Their number is the number of idle trainer. Click Journey
     to send them on a journey. If nothing happens or if the transaction is very overpriced, make sure you haven't done any journey for the past 12h, 
@@ -21,8 +21,12 @@ export default function Journey() {
      You can immediately leave the journey to win 1 courage. There is currently no benefits to stay on a journey.
     `;
 
+  let refresh = () => {
+    setInit(!init);
+  };
+
   useEffect(() => {
-    const initEff = async () => {
+    const init = async () => {
       setTrainersIdle(null);
       setTrainersJourney(null);
 
@@ -37,15 +41,23 @@ export default function Journey() {
 
       const contractMain = new web3.eth.Contract(abi_Main, adrMain);
 
-      const num = await contractMain.methods.balanceOf(adr).call();
+      let num = 0;
+      try {
+        num = await contractMain.methods.balanceOf(adr).call();
+      } catch {}
       let trainerList = [];
       let trainer;
       let trainersIdle = [];
       let trainersJourney = [];
       for (let i = 0; i < num; i++) {
-        trainer = await contractMain.methods.tokenOfOwnerByIndex(adr, i).call();
-        trainerList.push(trainer);
-        let status = await contractMain.methods.getStatus(trainer).call();
+        let status = '5';
+        try {
+          trainer = await contractMain.methods
+            .tokenOfOwnerByIndex(adr, i)
+            .call();
+          trainerList.push(trainer);
+          status = await contractMain.methods.getStatus(trainer).call();
+        } catch (e) {}
 
         switch (status) {
           case '0':
@@ -67,36 +79,39 @@ export default function Journey() {
       setTrainersJourney(trainersJourney);
       setAdr(adr);
     };
-    setInit(initEff());
-  }, [init]);
-
-  useEffect(() => {
     if (typeof window !== undefined) {
       init();
     }
-  });
+  }, [init]);
+
+  // useEffect(() => {
+  //   if (typeof window !== undefined) {
+  //     init();
+  //   }
+  // }, [init]);
 
   return (
     <section id="journey">
       <div className="inner">
         <div id="top-trainers">
           <p id="trainerLists">
-            {/*<React.Fragment>*/}
-            <h3>Trainer list</h3>
-            <span>
-              Idle trainers :{' '}
-              {trainersIdle
-                ? trainersIdle.length.toString()
-                : 'loading trainers...'}
-            </span>
-            <br />
-            <span>
-              Journey trainers :{' '}
-              {trainersJourney
-                ? trainersJourney.length.toString()
-                : 'loading trainers...'}
-            </span>
-            <br />
+            <React.Fragment>
+              <h3>Trainer list</h3>
+              <span>
+                Idle trainers :{' '}
+                {trainersIdle
+                  ? trainersIdle.length.toString()
+                  : 'loading trainers...'}
+              </span>
+              <br />
+              <span>
+                Journey trainers :{' '}
+                {trainersJourney
+                  ? trainersJourney.length.toString()
+                  : 'loading trainers...'}
+              </span>
+              <br />
+            </React.Fragment>
           </p>
           <p className="div-icon">
             <Tooltip title={help} placement="right">
@@ -108,10 +123,10 @@ export default function Journey() {
             <br />
             <Fab
               size="small"
-              disableTouchRipple="true"
+              disableTouchRipple={true}
               className="trainer-icon-refresh"
               aria-label="refresh"
-              onClick={init()}
+              onClick={refresh}
             >
               <RefreshOutlined fontSize="large" />
             </Fab>

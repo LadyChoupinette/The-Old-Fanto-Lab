@@ -12,8 +12,8 @@
     "@mui/icons-material": "^5.3.1",
     "@mui/material": "^5.4.0",
     "electron": "^17.0.0",
-    "framer-motion": "^6.2.3",
-    "gatsby": "^4.6.1",
+    "framer-motion": "^6.2.4",
+    "gatsby": "^4.6.2",
     "gatsby-image": "^3.11.0",
     "gatsby-plugin-manifest": "^4.6.0",
     "gatsby-plugin-offline": "^5.6.0",
@@ -30,9 +30,9 @@
     "react-scrollspy": "^3.4.2",
     "react-web3": "^1.2.0",
     "smoothscroll-polyfill": "^0.4.4",
-    "web3": "^3.0.0-rc.5",
+    "web3": "^1.7.0",
     "sass": "^1.49.7",
-    "node-sass": "^4.13.1"
+    "node-sass": "^7.0.1"
   },
   "scripts": {
     "develop": "gatsby develop",
@@ -44,18 +44,22 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
-    "@chakra-ui/react": "^1.6.12",
-    "@vercel/node": "1.9.0",
-    "gh-pages": "^2.0.1",
-    "prettier": "^1.17.0",
+    "babel-core": "^6.26.3",
+    "typescript": "^4.5.5",
+    "babel-eslint": "^10.1.0",
+    "@chakra-ui/react": "^1.8.1",
+    "@vercel/node": "1.12.1",
+    "prop-types": "15.8.1",
+    "gh-pages": "^3.2.3",
+    "prettier": "^2.5.1",
     "rimraf": "^3.0.2",
     "https-browserify": "^1.0.0",
     "stream-browserify": "^3.0.0",
-    "assert/": "^2.0.0",
+    "assert": "^2.0.0",
     "stream-http": "^3.2.0",
-    "url/": "^0.11.0",
+    "url": "^0.11.0",
     "os-browserify": "^0.3.0",
-    "Buffer": "^0.0.0"
+    "buffer": "^6.0.3"
 
   },
   "keywords": [

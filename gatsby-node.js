@@ -5,24 +5,17 @@
  */
 
 const webpack = require('webpack');
-exports.onCreateWebpackConfig = ({
-  stage,
-  rules,
-  loaders,
-  plugins,
-  actions,
-}) => {
+exports.onCreateWebpackConfig = ({ stage, loaders, plugins, actions }) => {
   actions.setWebpackConfig({
     resolve: {
       fallback: {
         stream: require.resolve('stream-browserify'),
         crypto: require.resolve('crypto-browserify'),
-        assert: require.resolve('assert/'),
+        assert: require.resolve('assert'),
         http: require.resolve('stream-http'),
         https: require.resolve('https-browserify'),
-        url: require.resolve('url/'),
+        url: require.resolve('url'),
         os: require.resolve('os-browserify/browser'),
-        Buffer: require.resolve('Buffer'),
       },
     },
     module: {

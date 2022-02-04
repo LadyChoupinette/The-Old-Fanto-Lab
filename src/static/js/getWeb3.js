@@ -1,5 +1,4 @@
 import Web3 from 'web3';
-import React from 'react';
 
 const web3Get = function() {
   if (typeof window !== undefined) {
@@ -8,7 +7,9 @@ const web3Get = function() {
     return null;
   }
 };
-export let web3 = web3Get();
+const web3 = web3Get();
+
+export default web3;
 
 // export const connectWallet = async () => {
 //   if (window.ethereum) {
