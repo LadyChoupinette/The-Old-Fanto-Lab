@@ -26,7 +26,7 @@ export default function Journey() {
   };
 
   useEffect(() => {
-    const init = async () => {
+    const initialize = async () => {
       setTrainersIdle(null);
       setTrainersJourney(null);
 
@@ -86,10 +86,10 @@ export default function Journey() {
       setAdr(adr);
     };
     // if (typeof window !== undefined) {
-    init();
+    initialize();
     // }
   }, [init]);
-  refresh();
+  // refresh();
 
   // useEffect(() => {
   //   if (typeof window !== undefined) {
