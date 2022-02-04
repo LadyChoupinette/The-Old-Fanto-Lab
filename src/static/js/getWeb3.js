@@ -5,7 +5,7 @@ const web3Get = async function() {
   await window.ethereum.enable();
   return new Web3(window.ethereum);
 };
-const web3 = web3Get();
+const web3 = await web3Get();
 
 export default web3;
 
