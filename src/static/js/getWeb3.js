@@ -6,7 +6,7 @@ const web3 = async function() {
   return new Web3(window.ethereum);
 };
 
-export default web3;
+export default web3();
 
 // export const connectWallet = async () => {
 //   if (window.ethereum) {
