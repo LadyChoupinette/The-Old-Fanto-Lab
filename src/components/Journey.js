@@ -31,7 +31,6 @@ export default function Journey() {
       setTrainersJourney(null);
 
       let adr;
-      await window.ethereum.enable();
       const acc = await web3.eth.getAccounts();
 
       adr = acc[0];
