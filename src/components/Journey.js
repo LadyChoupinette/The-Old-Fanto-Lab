@@ -4,7 +4,9 @@ import { ButtonBatchJourney } from './Buttons/ButtonBatchJourney';
 import { RefreshOutlined } from '@mui/icons-material';
 import HelpOutlineOutlinedIcon from '@mui/icons-material/HelpOutlineOutlined';
 import { Fab, Tooltip } from '@mui/material';
-import web3 from '../static/js/getWeb3';
+import loadable from '@loadable/component';
+const web3 = loadable(() => import('../static/js/getWeb3'));
+// import web3 from '../static/js/getWeb3';
 
 export default function Journey() {
   const [adr, setAdr] = useState(null);
