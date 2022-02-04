@@ -1,10 +1,9 @@
 import Web3 from 'web3';
 
-const web3Get = async function() {
+const web3 = async function() {
   console.log('hey');
   return new Web3(window.ethereum);
 };
-const web3 = await web3Get();
 
 export default web3;
 
