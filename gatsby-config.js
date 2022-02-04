@@ -1,20 +1,17 @@
 const config = require('./config');
-const webpack = require("webpack");
 
 module.exports = {
-  pathPrefix: config.pathPrefix,
   siteMetadata: {
     title: config.siteTitle,
   },
   plugins: [
-
     'gatsby-plugin-react-helmet',
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: config.manifestName,
         short_name: config.manifestShortName,
-        start_url: config.pathPrefix || config.manifestStartUrl,
+        start_url: config.manifestStartUrl,
         background_color: config.manifestBackgroundColor,
         theme_color: config.manifestThemeColor,
         display: config.manifestDisplay,
@@ -22,8 +19,5 @@ module.exports = {
       },
     },
     'gatsby-plugin-sass',
-    'gatsby-plugin-offline',
-
   ],
 };
-

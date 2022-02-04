@@ -15,7 +15,7 @@ section, article {
 
 #one {
   color: _palette(fg_w);
-  font-family: _font(family-heading);
+  font-family: _font(family-heading), sans-serif;
   font-size: 1.5em;
   font-weight: _font(weight-heading);
   letter-spacing: _font(kern-heading);
@@ -35,6 +35,14 @@ section, article {
 }
 
 #top-trainers {
+
+  h3{
+    text-align: left;
+    color: white;
+    border-bottom: solid 2px rgba(255, 255, 255, 0.6);
+  }
+
+  text-align: right;
   display: inline-flex;
 }
 
@@ -68,7 +76,7 @@ section, article {
 }
 
 #four {
-  font-family: _font(family-heading);
+  font-family: _font(family-heading), sans-serif;
   font-size: 3.5em;
   font-weight: 600;
   letter-spacing: _font(kern-heading);
