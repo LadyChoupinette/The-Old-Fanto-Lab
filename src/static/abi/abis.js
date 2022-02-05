@@ -681,8 +681,8 @@ export const abi_Main = [
   },
 ];
 
-export const adrTOFLOld = '0x9306e24616838c981251c4d64Af2B926DB3f2625';
-export const adrTOFL = '0x210382820b7eB3D4Bf551cE60083b0181f8E319c';
+export const adrTOFL = '0x9306e24616838c981251c4d64Af2B926DB3f2625';
+export const adrTOFLNew = '0x210382820b7eB3D4Bf551cE60083b0181f8E319c';
 
 export const adrMain = '0x4F46C9D58c9736fe0f0DB5494Cf285E995c17397';
 // let web3 = new Web3(web3.currentProvider)

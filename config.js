@@ -12,7 +12,7 @@ module.exports = {
   manifestThemeColor: '#000000',
   manifestDisplay: 'standalone',
   manifestIcon: 'src/assets/img/website-icon.png',
-  heading: 'The Old Fanto-Lab',
+  heading: 'The Old Fanto-Lab - DEV VERSION -',
   subHeading: 'Lost, on a barren planet...',
   // social
   socialLinks: [
