@@ -20,7 +20,7 @@ class Index extends React.Component {
             <p>
               Far away, on a distant planet, the old fanto lab runs again. But very badly because its a development lab.
               <br />
-              Please switch to <a href="https://the-old-fanto-lab.art">https://the-old-fanto-lab.art</a> for the real lab. Also CTRL+F. ALWAYS.
+              Please switch to <a href="https://the-old-fanto-lab.art">https://the-old-fanto-lab.art</a> for the real lab. Also CTRL+F5. ALWAYS.
             </p>
           </div>
           <div id="arrow">
