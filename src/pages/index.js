@@ -18,11 +18,9 @@ class Index extends React.Component {
             <h2>{config.heading}</h2>
             {/*<p>{config.subHeading}</p>*/}
             <p>
-              Far away, on a distant planet, the old fanto lab runs again. The
-              end of winter makes it quite easier to navigate around.
+              Far away, on a distant planet, the old fanto lab runs again. But very badly because its a development lab.
               <br />
-              Surely you will find something around here to help you on your
-              quest... Perhaps even a way to enter inside ?
+              Please switch to <a href="https://the-old-fanto-lab.art">https://the-old-fanto-lab.art</a> for the real lab. Also CTRL+F. ALWAYS.
             </p>
           </div>
           <div id="arrow">
