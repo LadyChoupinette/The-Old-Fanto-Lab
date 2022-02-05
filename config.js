@@ -1,4 +1,9 @@
 module.exports = {
+  node: {
+    Buffer: true,
+    process: true,
+  },
+  mode: 'production',
   siteTitle: 'The Old Fanto Lab', // <title>
   manifestName: 'TheOldFantoLab',
   manifestShortName: 'Old Lab', // max 12 characters
@@ -7,7 +12,6 @@ module.exports = {
   manifestThemeColor: '#000000',
   manifestDisplay: 'standalone',
   manifestIcon: 'src/assets/img/website-icon.png',
-  pathPrefix: `/gatsby-starter-solidstate/`, // This path is subpath of your hosting https://domain/portfolio
   heading: 'The Old Fanto-Lab',
   subHeading: 'Lost, on a barren planet...',
   // social
@@ -17,5 +21,5 @@ module.exports = {
       name: 'Twitter',
       url: 'https://twitter.com/TheOldFantoLab',
     },
-  ]
+  ],
 };

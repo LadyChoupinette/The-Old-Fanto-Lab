@@ -21,6 +21,7 @@ class SideBar extends React.Component {
           <h1>
             <Link to="/">The Old Fanto Lab</Link>
           </h1>
+
           <nav>
             <a
               href="#menu"

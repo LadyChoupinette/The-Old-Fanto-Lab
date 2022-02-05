@@ -70,7 +70,7 @@
     @include vendor('transition-delay', '0.8s');
     @include vendor('filter', 'blur(0)');
     opacity: 1;
-    font-family: 'Source Sans Pro';
+    font-family: 'Source Sans Pro', sans-serif;
     font-size: 1.5em;
     font-weight: 600;
     text-align:left;

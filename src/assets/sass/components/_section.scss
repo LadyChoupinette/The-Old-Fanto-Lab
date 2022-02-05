@@ -15,7 +15,7 @@ section, article {
 
 #one {
   color: _palette(fg_w);
-  font-family: _font(family-heading);
+  font-family: _font(family-heading), sans-serif;
   font-size: 1.5em;
   font-weight: _font(weight-heading);
   letter-spacing: _font(kern-heading);
@@ -76,7 +76,7 @@ section, article {
 }
 
 #four {
-  font-family: _font(family-heading);
+  font-family: _font(family-heading), sans-serif;
   font-size: 3.5em;
   font-weight: 600;
   letter-spacing: _font(kern-heading);

@@ -1,14 +1,22 @@
 import Web3 from 'web3';
 
-const web3Get = function() {
-  if (typeof window === undefined) {
-    return new Web3(window.ethereum);
-  } else {
-    return null;
-  }
+const web3 = async function() {
+  console.log('hey');
+  await window.ethereum.request({ method: 'eth_requestAccounts' });
+  return new Web3(window.ethereum);
 };
-const web3 = web3Get();
-export default web3;
+
+export default web3();
+//
+// import Eth from 'ethers';
+//
+// const eth = async function() {
+//   console.log('hey');
+//   await ethereum.sendAsync('eth_requestAccounts');
+//   return new Eth(ethereum);
+// };
+//
+// export default web3();
 
 // export const connectWallet = async () => {
 //   if (window.ethereum) {

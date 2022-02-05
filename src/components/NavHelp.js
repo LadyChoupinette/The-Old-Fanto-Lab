@@ -6,28 +6,28 @@ export default function NavHelp({ onMenuToggle = () => {} }) {
     <nav id="menu">
       <div className="inner">
         <h2>Help</h2>
-          <ul className="links">
-              <li>
-                  <Link
-                      onClick={e => {
-                          onMenuToggle();
-                      }}
-                      to="/"
-                  >
-                      Help
-                  </Link>
-              </li>
-              <li>
-                  <Link
-                      onClick={e => {
-                          onMenuToggle();
-                      }}
-                      to="https://the-old-fanto-lab.vercel.app/"
-                  >
-                      About
-                  </Link>
-              </li>
-          </ul>
+        <ul className="links">
+          <li>
+            <Link
+              onClick={() => {
+                onMenuToggle();
+              }}
+              to="/"
+            >
+              Help
+            </Link>
+          </li>
+          <li>
+            <Link
+              onClick={() => {
+                onMenuToggle();
+              }}
+              to="https://the-old-fanto-lab.vercel.app/"
+            >
+              About
+            </Link>
+          </li>
+        </ul>
         <a
           className="close"
           onClick={e => {
