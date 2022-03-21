@@ -2,6 +2,7 @@
   "name": "the-old-fanto-lab",
   "version": "0.0.1",
   "description": "Gatsby.js V2 starter template based on Solid State by HTML5 UP",
+  "licence": "MIT",
   "author": {
     "name": "Choupinette",
     "email": "chou_godzichou@hotmail.com"
@@ -12,6 +13,7 @@
     "@loadable/component": "^5.15.2",
     "@mui/icons-material": "^5.3.1",
     "@mui/material": "^5.4.0",
+    "@mui/styles": "^5.5.1",
     "electron": "^17.0.0",
     "framer-motion": "^6.2.4",
     "gatsby": "^4.6.2",

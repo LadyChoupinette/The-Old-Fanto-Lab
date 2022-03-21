@@ -18,9 +18,6 @@ class SideBar extends React.Component {
     return (
       <>
         <header id="header" className={`${this.state.headerOpen ? '' : 'alt'}`}>
-          <h1>
-            <Link to="/">The Old Fanto Lab</Link>
-          </h1>
 
           <nav>
             <a

@@ -4,6 +4,8 @@ import Helmet from 'react-helmet';
 import '../assets/sass/main.scss';
 import SideBar from './Sidebar';
 import Footer from './Footer';
+import Journey from "./Journey";
+import TemporaryDrawer from "./Buttons/TemporaryDrawer";
 
 class Layout extends React.Component {
   constructor(props) {
@@ -41,8 +43,10 @@ class Layout extends React.Component {
           <html lang="en" />
         </Helmet>
         <div className={isPreloaded ? ' main-body  is-preload' : ' main-body'}>
+        {/*    <div class="ee">X</div>*/}
+          <TemporaryDrawer />
           <div id="page-wrapper">
-            <SideBar fullMenu={false} />
+            {/*<SideBar fullMenu={false} />*/}
             {/*<SideBarHelp fullMenu={fullMenu} />*/}
             {children}
             {/*<Journey />*/}

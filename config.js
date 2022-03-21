@@ -3,7 +3,7 @@ module.exports = {
     Buffer: true,
     process: true,
   },
-  mode: 'production',
+  mode: 'development',
   siteTitle: 'The Old Fanto Lab', // <title>
   manifestName: 'TheOldFantoLab',
   manifestShortName: 'Old Lab', // max 12 characters
@@ -11,7 +11,7 @@ module.exports = {
   manifestBackgroundColor: '#000000',
   manifestThemeColor: '#000000',
   manifestDisplay: 'standalone',
-  manifestIcon: 'src/assets/img/website-icon.png',
+  manifestIcon: 'src/assets/img/website-icon.svg',
   heading: 'The Old Fanto-Lab',
   subHeading: 'Lost, on a barren planet...',
   // social

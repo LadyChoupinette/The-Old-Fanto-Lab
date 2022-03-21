@@ -6,6 +6,29 @@
 
 /* Wrapper */
 
+.ee {
+  color: aqua;
+  position: relative;
+  top: 500px
+}
+
+.MuiDrawer-paper{
+background-color: rgba(125, 208, 37, 0.18) !important;
+}
+#explore-button{
+  margin: 1em;
+  background-color: rgba(125, 208, 37, 0.38);
+  color: black;
+  font-size: large;
+  font-weight: bold;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+.MuiListItemText-primary
+{
+  font-size: medium !important;
+}
+
 #page-wrapper{
   background: linear-gradient(to top, rgba(172, 173, 129, 0.76), transparent);
 }
