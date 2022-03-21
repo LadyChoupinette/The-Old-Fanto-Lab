@@ -21,7 +21,7 @@ exports.onCreateWebpackConfig = ({ stage, loaders, plugins, actions }) => {
     module: {
       rules: [
         {
-          test: /web3/,
+          // test: /web3/,
           // use: [
           //   // You don't need to add the matching ExtractText plugin
           //   // because gatsby already includes it and makes sure it's only
