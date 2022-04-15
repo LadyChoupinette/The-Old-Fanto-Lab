@@ -14,8 +14,8 @@ class Fields extends React.Component {
                         <p style={{textShadow: ' 1px 1px 1px #bbb831'}}
                         >
                             You wander in the land around the The Old Lab. These lush grounds are filled with life,
-                            from little creatures in the herbs to those big eggs that definitly don't look like
-                            belongings to those creatures...
+                            from little creatures in the herbs to those big eggs that definitly look like
+                            belongings to much bigger ones...
                             <br/>
                             <br/>
                             <PonyEggs/>

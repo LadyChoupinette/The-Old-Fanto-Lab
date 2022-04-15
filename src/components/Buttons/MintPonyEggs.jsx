@@ -132,6 +132,11 @@ export default class PonyEggs extends React.Component {
                 >
                     Mint !!!
                 </button>
+                <span style={{
+                        position:'absolute',
+                        paddingTop:'5em',
+                        fontSize: 'x-large',
+                    }}>(Each one is a free airdrop of PFPonies, very soon to come...)</span>
             </div>
         )
     }
