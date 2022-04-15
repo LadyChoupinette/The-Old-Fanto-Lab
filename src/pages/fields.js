@@ -1,8 +1,9 @@
 import React from 'react';
 // const Layout = loadable(() => import('../components/Layout'));
 import Layout from '../components/Layout';
-import loadable from "@loadable/component";
-const PonyEggs = loadable(() => import('../components/Buttons/MintPonyEggs'));
+import {PonyEggs} from "../components/Buttons/MintPonyEggs";
+
+// const PonyEggs = loadable(() => import('../components/Buttons/MintPonyEggs'));
 
 class Fields extends React.Component {
     render() {
@@ -10,10 +11,11 @@ class Fields extends React.Component {
             <Layout fullMenu={false} page="fields">
                 <section id="banner-fields">
                     <div className="inner-fields">
-                        <p style={{textShadow:' 1px 1px 1px #bbb831'}}
+                        <p style={{textShadow: ' 1px 1px 1px #bbb831'}}
                         >
                             You wander in the land around the The Old Lab. These lush grounds are filled with life,
-                            from little creatures in the herbs to those big eggs that definitly don't look like belongings to those creatures...
+                            from little creatures in the herbs to those big eggs that definitly don't look like
+                            belongings to those creatures...
                             <br/>
                             <br/>
                             <PonyEggs/>
@@ -36,16 +38,16 @@ class Fields extends React.Component {
                 <br/>
                 {/*<section id="wrapper-fields">*/}
                 {/*    <section id="one" className="wrapper-fields spotlight">*/}
-                        {/*<Fields />*/}
-                    {/*</section>*/}
+                {/*<Fields />*/}
+                {/*</section>*/}
 
-                    {/*<section id="four" className="wrapper-fields alt style1">*/}
-                    {/*    <div className="inner">*/}
-                    {/*        <p className="major">*/}
-                    {/*            The noises of the Old lab seems to attract strange creatures all around...*/}
-                    {/*        </p>*/}
-                    {/*    </div>*/}
-                    {/*</section>*/}
+                {/*<section id="four" className="wrapper-fields alt style1">*/}
+                {/*    <div className="inner">*/}
+                {/*        <p className="major">*/}
+                {/*            The noises of the Old lab seems to attract strange creatures all around...*/}
+                {/*        </p>*/}
+                {/*    </div>*/}
+                {/*</section>*/}
                 {/*</section>*/}
             </Layout>
         );

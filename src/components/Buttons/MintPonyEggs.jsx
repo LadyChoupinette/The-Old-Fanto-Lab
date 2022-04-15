@@ -1,13 +1,11 @@
 import React from 'react';
-import {leaveJourney} from "../../static/js/leaveJourney";
-import {number} from "prop-types";
 import NumericInput from "react-numeric-input";
-import {batchLeaveJourney} from "../../static/js/batchJourney";
-import {ponyMint} from "../../static/js/PonyEggsUtils";
+import loadable from "@loadable/component";
+// import {ponyMint} from "../../static/js/PonyEggsUtils";
+const ponyMint = loadable(() => import('../../static/js/PonyEggsUtils'));
 
 export class PonyEggs extends React.Component {
 
-    price = 12;
     totalMint = 0;
 
     constructor() {
@@ -39,7 +37,6 @@ export class PonyEggs extends React.Component {
             <div id="buttonLeave">
                 <br/>
                 <label>
-                    <span classname="labelAmount"/>
                     <NumericInput
                         precision={0}
                         value={this.state.amount}
