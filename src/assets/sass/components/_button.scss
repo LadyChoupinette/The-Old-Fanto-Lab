@@ -24,6 +24,10 @@ NumericInput {
 	display: inline-flex;
 }
 
+#wrapperFields {
+	display: inline-flex;
+}
+
 	input[type="submit"],
 	input[type="reset"],
 	input[type="button"],
@@ -65,24 +69,24 @@ NumericInput {
 			}
 		}
 
-		&.primary {
-			background-color: _palette(border-bg);
-			box-shadow: none;
-
-			&:hover {
-				background-color: desaturate(lighten(_palette(border-bg), 3), 1.5);
-			}
-
-			&:active {
-				background-color: saturate(darken(_palette(border-bg), 3), 1.5);
-			}
-
-			&.icon {
-				&:before {
-					color: mix(_palette(fg-bold), _palette(accent), 25%);
-				}
-			}
-		}
+		//&.primary {
+		//	background-color: _palette(border-bg);
+		//	box-shadow: none;
+		//
+		//	&:hover {
+		//		background-color: desaturate(lighten(_palette(border-bg), 3), 1.5);
+		//	}
+		//
+		//	&:active {
+		//		background-color: saturate(darken(_palette(border-bg), 3), 1.5);
+		//	}
+		//
+		//	&.icon {
+		//		&:before {
+		//			color: mix(_palette(fg-bold), _palette(accent), 25%);
+		//		}
+		//	}
+		//}
 
 		&.fit {
 			width: 100%;

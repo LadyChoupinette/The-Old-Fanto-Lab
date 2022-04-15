@@ -20,6 +20,11 @@ class Fields extends React.Component {
                             <br/>
                             <PonyEggs/>
                             <br/>
+                            <span style={{
+                                position:'relative',
+                                fontSize: 'x-large',
+                            }}>(Each one is a free airdrop of PFPonies, very soon to come...)</span>
+                            <br/>
                             OR<br/>
                             <a href="https://paintswap.finance/marketplace/collections/0xa578d7f04ea7129f0ef81827846156438da65025"
                                target="_blank">> Try to catch a little creature</a>

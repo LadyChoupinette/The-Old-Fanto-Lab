@@ -45,7 +45,7 @@ export default class PonyEggs extends React.Component {
             //     <button onClick={() => leaveJourney(this.amount, this.id)}>Mint Pony Eggs</button>
             //     {this.amount*12} FTM
             // </div>
-            <div id="buttonLeave">
+            <div id="wrapperFields">
                 <br/>
                 <label>
                     <NumericInput
@@ -132,11 +132,7 @@ export default class PonyEggs extends React.Component {
                 >
                     Mint !!!
                 </button>
-                <span style={{
-                        position:'absolute',
-                        paddingTop:'5em',
-                        fontSize: 'x-large',
-                    }}>(Each one is a free airdrop of PFPonies, very soon to come...)</span>
+
             </div>
         )
     }
