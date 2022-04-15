@@ -151,7 +151,6 @@ export default function TemporaryDrawer() {
                             }
 
                         </ListItemIcon>
-
                         <ListItemText className="link-drawer" primary={text}
                                       sx={{fontWeight: '900', cursor: index === 3 ? "not-allowed" : "normal"}}/>
                     </ListItem>
