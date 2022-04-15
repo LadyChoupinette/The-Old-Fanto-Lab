@@ -1,24 +1,27 @@
 import React from 'react';
 import NumericInput from "react-numeric-input";
 import loadable from "@loadable/component";
-// import {ponyMint} from "../../static/js/PonyEggsUtils";
-const ponyMint = loadable(() => import('../../static/js/PonyEggsUtils'));
+import {ponyMint} from "../../static/js/PonyEggsUtils";
+// const ponyMint = loadable(() => import('../../static/js/PonyEggsUtils'));
 
 export class PonyEggs extends React.Component {
 
     totalMint = 0;
+    // amount = 1;
 
     constructor() {
         super()
-        this.state = {amount: 1};
+        this.state = {
+            amount: 1,
+        };
     }
 
     myFormat(num) {
         return num + ' Pony Egg (12 $FTM each)';
     }
 
-    ponyMintParent = function(){
-        ponyMint(this.state.amount);
+    ponyMintParent = function(e){
+        ponyMint(e);
 
     }
 
@@ -121,7 +124,7 @@ export class PonyEggs extends React.Component {
                             borderTopColor: 'rgb(255,255,255)',
                         },
                     }}
-                    onClick={this.ponyMintParent}
+                    onClick={() => this.ponyMintParent(this.state.amount)}
 
                 >
                     Mint !!!

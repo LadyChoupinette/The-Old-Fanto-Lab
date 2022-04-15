@@ -20,8 +20,9 @@ class Fields extends React.Component {
                             <br/>
                             <PonyEggs/>
                             <br/>
+                            OR<br/>
                             <a href="https://paintswap.finance/marketplace/collections/0xa578d7f04ea7129f0ef81827846156438da65025"
-                               target="_blank">Try to catch a little creature</a>
+                               target="_blank">> Try to catch a little creature</a>
                             {/*<p>*/}
                             {/*    Send your fantomon trainers in a journey*/}
                             {/*</p>*/}
