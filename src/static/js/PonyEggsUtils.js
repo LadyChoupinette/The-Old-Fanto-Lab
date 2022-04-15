@@ -1,8 +1,7 @@
 import {abi_PonyEgg,adrPonyEgg} from '../abi/abis';
 import web3 from './getWeb3';
-import React from "react";
 
-export async function ponyMint (amount) {
+export default async function ponyMint (amount) {
         console.log(amount);
         const w3 = await web3;
         console.log(w3);

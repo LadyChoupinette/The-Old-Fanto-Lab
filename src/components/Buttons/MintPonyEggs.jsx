@@ -1,7 +1,7 @@
 import React from 'react';
 import NumericInput from "react-numeric-input";
-import loadable from "@loadable/component";
-import {ponyMint} from "../../static/js/PonyEggsUtils";
+// import loadable from "@loadable/component";
+import ponyMint from "../../static/js/PonyEggsUtils";
 // const ponyMint = loadable(() => import('../../static/js/PonyEggsUtils'));
 
 export class PonyEggs extends React.Component {
@@ -20,9 +20,12 @@ export class PonyEggs extends React.Component {
         return num + ' Pony Egg (12 $FTM each)';
     }
 
-    ponyMintParent = async function (e) {
-        await ponyMint(e);
+    ponyMintParent;
 
+    componentDidMount() {
+        this.ponyMintParent = async function (e) {
+            await ponyMint(e);
+        }
     }
 
     amountChange(e) {

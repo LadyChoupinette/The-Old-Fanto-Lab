@@ -1,9 +1,9 @@
 import React from 'react';
 // const Layout = loadable(() => import('../components/Layout'));
 import Layout from '../components/Layout';
-import {PonyEggs} from "../components/Buttons/MintPonyEggs";
-
-// const PonyEggs = loadable(() => import('../components/Buttons/MintPonyEggs'));
+// import {PonyEggs} from "../components/Buttons/MintPonyEggs";
+import loadable from "@loadable/component";
+const PonyEggs = loadable(() => import('../components/Buttons/MintPonyEggs'));
 
 class Fields extends React.Component {
     render() {
