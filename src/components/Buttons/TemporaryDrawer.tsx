@@ -140,19 +140,19 @@ export default function TemporaryDrawer() {
 
                         <ListItemIcon>
 
-                            {index ===4 ? <a href='./'><HomeIcon sx={{fontSize: 50, color: "rgb(0,0,0)"}}/></a>
+                            {index ===4 ? <a href='../'><HomeIcon sx={{fontSize: 50, color: "rgb(0,0,0)"}}/></a>
                                 : index === 3 ?
                                 <SvgIcon component={CaveIcon} sx={{cursor: "not-allowed"}}/>
                                 : index === 2 ?
-                                    <a href='./workshop' target='_blank'><BiotechIcon sx={{fontSize: 50, color: "rgb(0,0,0)", cursor: "not-allowed"}}/></a>
+                                    <a href='../workshop/'><BiotechIcon sx={{fontSize: 50, color: "rgb(0,0,0)"}}/></a>
                                     : index === 1 ?
-                                        <a href='./fields' ><GrassIcon sx={{fontSize: 50, color: "rgb(0,0,0)"}}/></a>
+                                        <a href='../fields/' ><GrassIcon sx={{fontSize: 50, color: "rgb(0,0,0)"}}/></a>
                                         : <a href='https://nft-watch.vercel.app/' target='_blank'><ObsIcon/></a>
                             }
 
                         </ListItemIcon>
                         <ListItemText className="link-drawer" primary={text}
-                                      sx={{fontWeight: '900', cursor: index === 0 ? "normal" : "not-allowed"}}/>
+                                      sx={{fontWeight: '900', cursor: index === 3 ? "not-allowed" : "normal"}}/>
                     </ListItem>
                 ))}
             </List>
