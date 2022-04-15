@@ -146,7 +146,7 @@ export default function TemporaryDrawer() {
                                 : index === 2 ?
                                     <a href='./workshop' target='_blank'><BiotechIcon sx={{fontSize: 50, color: "rgb(0,0,0)", cursor: "not-allowed"}}/></a>
                                     : index === 1 ?
-                                        <a href='./fields' target='_blank'><GrassIcon sx={{fontSize: 50, color: "rgb(0,0,0)"}}/></a>
+                                        <a href='./fields' ><GrassIcon sx={{fontSize: 50, color: "rgb(0,0,0)"}}/></a>
                                         : <a href='https://nft-watch.vercel.app/' target='_blank'><ObsIcon/></a>
                             }
 

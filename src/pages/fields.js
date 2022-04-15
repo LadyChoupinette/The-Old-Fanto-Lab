@@ -1,9 +1,8 @@
 import React from 'react';
-// import loadable from '@loadable/component';
 // const Layout = loadable(() => import('../components/Layout'));
 import Layout from '../components/Layout';
-import Journey from "../components/Journey";
-import {PonyEggs} from "../components/Buttons/MintPonyEggs";
+import loadable from "@loadable/component";
+const PonyEggs = loadable(() => import('../components/Buttons/MintPonyEggs'));
 
 class Fields extends React.Component {
     render() {
@@ -35,10 +34,10 @@ class Fields extends React.Component {
                 <br/>
                 <br/>
                 <br/>
-                <section id="wrapper-fields">
-                    <section id="one" className="wrapper-fields spotlight">
+                {/*<section id="wrapper-fields">*/}
+                {/*    <section id="one" className="wrapper-fields spotlight">*/}
                         {/*<Fields />*/}
-                    </section>
+                    {/*</section>*/}
 
                     {/*<section id="four" className="wrapper-fields alt style1">*/}
                     {/*    <div className="inner">*/}
@@ -47,7 +46,7 @@ class Fields extends React.Component {
                     {/*        </p>*/}
                     {/*    </div>*/}
                     {/*</section>*/}
-                </section>
+                {/*</section>*/}
             </Layout>
         );
     }
