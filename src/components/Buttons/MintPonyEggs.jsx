@@ -20,17 +20,16 @@ export class PonyEggs extends React.Component {
         return num + ' Pony Egg (12 $FTM each)';
     }
 
-    ponyMintParent = function(e){
-        ponyMint(e);
+    ponyMintParent = async function (e) {
+        await ponyMint(e);
 
     }
 
-    amountChange(amount) {
-        console.log(amount);
-        console.log(this);
-        this.setState({
-            ['amount']: amount,
-        });
+    amountChange(e) {
+        console.log(e);
+        this.state = {
+            amount: e,
+        }
     }
 
 
