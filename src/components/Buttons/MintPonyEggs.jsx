@@ -17,6 +17,11 @@ export class PonyEggs extends React.Component {
         return num + ' Pony Egg (12 $FTM each)';
     }
 
+    ponyMintParent = function(){
+        ponyMint(this.state.amount);
+
+    }
+
     amountChange(amount) {
         console.log(amount);
         console.log(this);
@@ -116,11 +121,7 @@ export class PonyEggs extends React.Component {
                             borderTopColor: 'rgb(255,255,255)',
                         },
                     }}
-                    onClick={() =>
-                        ponyMint(
-                            this.state.amount
-                        )
-                    }
+                    onClick={this.ponyMintParent}
 
                 >
                     Mint !!!
