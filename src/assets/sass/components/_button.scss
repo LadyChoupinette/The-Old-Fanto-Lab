@@ -31,11 +31,11 @@ NumericInput {
 	.button {
 		@include vendor('appearance', 'none');
 		@include vendor('transition', 'background-color #{_duration(transition)} ease-in-out');
-		background-color: transparent;
+		background-color: black;
 		border-radius: _size(border-radius);
 		border: 1px solid white;
 		box-shadow: inset 2px 2px 2px 2px _palette(border);
-		color: _palette(fg-w) !important;
+		color: white !important;
 		cursor: pointer;
 		display: inline-block;
 		font-family: _font(family-heading);

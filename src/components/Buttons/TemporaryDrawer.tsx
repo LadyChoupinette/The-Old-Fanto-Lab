@@ -9,6 +9,7 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import BiotechIcon from '@mui/icons-material/Biotech';
 import GrassIcon from '@mui/icons-material/Grass';
+import HomeIcon from '@mui/icons-material/Home';
 import SvgIcon from "@mui/material/SvgIcon";
 
 type Anchor = 'top' | 'left' | 'bottom' | 'right';
@@ -134,17 +135,18 @@ export default function TemporaryDrawer() {
             onKeyDown={toggleDrawer(anchor, false)}
         >
             <List>
-                {['The Observatory', 'The Fields', 'The workshop', 'The Old Cave'].map((text, index) => (
+                {['The Observatory', 'The Fields', 'The Workshop', 'The Old Cave', 'Main Menu'].map((text, index) => (
                     <ListItem key={text} button sx={{textAlign: 'center', display: 'block'}}>
 
                         <ListItemIcon>
 
-                            {index === 3 ?
+                            {index ===4 ? <a href='./'><HomeIcon sx={{fontSize: 50, color: "rgb(0,0,0)"}}/></a>
+                                : index === 3 ?
                                 <SvgIcon component={CaveIcon} sx={{cursor: "not-allowed"}}/>
                                 : index === 2 ?
-                                    <BiotechIcon sx={{fontSize: 50, color: "rgb(0,0,0)", cursor: "not-allowed"}}/>
+                                    <a href='./workshop' target='_blank'><BiotechIcon sx={{fontSize: 50, color: "rgb(0,0,0)", cursor: "not-allowed"}}/></a>
                                     : index === 1 ?
-                                        <GrassIcon sx={{fontSize: 50, color: "rgb(0,0,0)", cursor: "not-allowed"}}/>
+                                        <a href='./fields' target='_blank'><GrassIcon sx={{fontSize: 50, color: "rgb(0,0,0)"}}/></a>
                                         : <a href='https://nft-watch.vercel.app/' target='_blank'><ObsIcon/></a>
                             }
 

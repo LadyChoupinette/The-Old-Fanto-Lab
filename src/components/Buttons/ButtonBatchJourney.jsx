@@ -66,7 +66,7 @@ export class ButtonBatchJourney extends React.Component {
         <div id="buttonLeave">
           <br />
           <label>
-            <span id="labelAmount">Tip (for Dev)</span>
+            <span className="labelAmount">Tip (for Dev)</span>
             <NumericInput
               precision={2}
               value={this.state.amount}

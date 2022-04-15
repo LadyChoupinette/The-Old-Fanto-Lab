@@ -9,7 +9,7 @@ class Footer extends React.Component {
               <li>
                 <a
                   href="https://twitter.com/TheOldFantoLab"
-                  className="icon fa-twitter"
+                  className="icon icon-twitter fa-twitter"
                 >
                   <span className="label">Twitter</span>
                 </a>
@@ -17,20 +17,6 @@ class Footer extends React.Component {
               <br />
               <br />
               <br />
-              <br />
-              <br />
-              <br />
-              <br />
-              <br />
-              <br />
-              <br />
-              <br />
-              <br />
-              <li>
-                <a href="https://www.deviantart.com/joakimolofsson/gallery">
-                  &copy; Artist : Joakim Olofsson{' '}
-                </a>
-              </li>
             </ul>
             <br />
             <br />

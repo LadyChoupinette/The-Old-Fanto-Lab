@@ -15,7 +15,7 @@ $size: (
         border-radius: 5px,
         element-height: 2.75em,
         element-margin: 2em,
-        inner: 60em,
+        inner: 40em,
         section-spacing: (
                 large: 3em,
                 medium: 2em,
@@ -43,6 +43,8 @@ $font: (
 // Palette.
 $palette: (
         bg: rgba(125, 208, 37, 0.18),
+        fields: rgba(122, 141, 61, 0.3),
+        workshop: rgba(255, 185, 125, 0.58),
         fg: #000000,
         fg_w:#ffffff,
         fg-bold: #000000,
@@ -56,7 +58,9 @@ $palette: (
 
 // Images
 $image: (
-  bg: '../images/Rocky_Landscape.jpg'
+  bg: '../images/Rocky_Landscape.jpg',
+        fields:'../images/Lush_Landscape.jpg',
+workshop:'../images/Old_Scientist_2.jpg'
         //bg: '../images/Cold_Landscape.jpg'
   //bg: '../images/Hot_Landscape.jpg'
   //bg: '../images/Hot_Landscape_2.jpg'

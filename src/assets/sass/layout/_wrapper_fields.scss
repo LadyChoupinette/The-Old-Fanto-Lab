@@ -12,8 +12,6 @@
   top: 500px
 }
 
-
-
 .MuiDrawer-paper{
 background-color: rgba(125, 208, 37, 0.18) !important;
 }
@@ -31,7 +29,7 @@ background-color: rgba(125, 208, 37, 0.18) !important;
   font-size: medium !important;
 }
 
-#page-wrapper{
+#page-wrapper-fields{
   background: linear-gradient(to top, rgba(172, 173, 129, 0.76), transparent);
 }
 
@@ -55,7 +53,7 @@ background-color: rgba(125, 208, 37, 0.18) !important;
 }
 
 
-#wrapper {
+#wrapper-fields {
   overflow-x: paged-x;
 
   > header {
@@ -72,6 +70,7 @@ background-color: rgba(125, 208, 37, 0.18) !important;
 
     #arrow{
       text-align: center;
+
     }
 
     h2 {
@@ -106,7 +105,6 @@ background-color: rgba(125, 208, 37, 0.18) !important;
       background-color: transparent;
     //margin-bottom: 0.5em;
     &:hover{
-
       background-color: rgba(128, 128, 128, 0.25);
     }
   }
@@ -116,14 +114,14 @@ background-color: rgba(125, 208, 37, 0.18) !important;
     > header {
       @include padding(5em, 0, (4em, 0, _size(wrapper-edges, large) * 0.5, 0));
 
-      background-color: _palette(bg);
+      background-color: _palette(fields);
 
       background-image: linear-gradient(
           to top,
-          transparentize(_palette(bg), 0.2),
-          transparentize(_palette(bg), 0.2)
+          transparentize(_palette(fields), 0.2),
+          transparentize(_palette(fields), 0.2)
         ),
-        url(_image(bg));
+        url(_image(fields));
 
       background-size: auto, cover;
 
@@ -176,11 +174,11 @@ background-color: rgba(125, 208, 37, 0.18) !important;
   }
 }
 
-.wrapper {
-  background-color: _palette(bg);
+.wrapper-fields {
+  background-color: _palette(fields);
   //margin: _size(wrapper-edges, large) 0;
   position: relative;
-  @include wrapper-edges-color(_palette(bg));
+  @include wrapper-edges-color(_palette(fields));
 
   &:before,
   &:after {
@@ -222,7 +220,7 @@ background-color: rgba(125, 208, 37, 0.18) !important;
 
   @for $i from 2 through _misc(max-wrapper-styles) {
     $j: 3 * ($i - 1);
-    $color: desaturate(lighten(_palette(bg), $j), $j * 0.5);
+    $color: desaturate(lighten(_palette(fields), $j), $j * 0.5);
 
     &.style#{$i} {
       background-color: $color;

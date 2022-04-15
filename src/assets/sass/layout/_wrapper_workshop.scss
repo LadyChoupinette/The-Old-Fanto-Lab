@@ -11,15 +11,17 @@
   position: relative;
   top: 500px
 }
-
-
-
+a{
+  .icon{
+    color:rgb(29, 155, 240);
+  }
+}
 .MuiDrawer-paper{
-background-color: rgba(125, 208, 37, 0.18) !important;
+background-color: _palette(workshop) !important;
 }
 #explore-button{
   margin: 1em;
-  background-color: rgba(125, 208, 37, 0.38);
+  background-color: _palette(workshop);
   color: black;
   font-size: large;
   font-weight: bold;
@@ -31,7 +33,7 @@ background-color: rgba(125, 208, 37, 0.18) !important;
   font-size: medium !important;
 }
 
-#page-wrapper{
+#page-wrapper-workshop{
   background: linear-gradient(to top, rgba(172, 173, 129, 0.76), transparent);
 }
 
@@ -55,7 +57,7 @@ background-color: rgba(125, 208, 37, 0.18) !important;
 }
 
 
-#wrapper {
+#wrapper-workshop {
   overflow-x: paged-x;
 
   > header {
@@ -72,6 +74,7 @@ background-color: rgba(125, 208, 37, 0.18) !important;
 
     #arrow{
       text-align: center;
+
     }
 
     h2 {
@@ -106,7 +109,6 @@ background-color: rgba(125, 208, 37, 0.18) !important;
       background-color: transparent;
     //margin-bottom: 0.5em;
     &:hover{
-
       background-color: rgba(128, 128, 128, 0.25);
     }
   }
@@ -116,14 +118,14 @@ background-color: rgba(125, 208, 37, 0.18) !important;
     > header {
       @include padding(5em, 0, (4em, 0, _size(wrapper-edges, large) * 0.5, 0));
 
-      background-color: _palette(bg);
+      background-color: _palette(workshop);
 
       background-image: linear-gradient(
           to top,
-          transparentize(_palette(bg), 0.2),
-          transparentize(_palette(bg), 0.2)
+          transparentize(_palette(workshop), 0.2),
+          transparentize(_palette(workshop), 0.2)
         ),
-        url(_image(bg));
+        url(_image(workshop));
 
       background-size: auto, cover;
 
@@ -176,11 +178,11 @@ background-color: rgba(125, 208, 37, 0.18) !important;
   }
 }
 
-.wrapper {
-  background-color: _palette(bg);
+.wrapper-workshop {
+  background-color: _palette(workshop);
   //margin: _size(wrapper-edges, large) 0;
   position: relative;
-  @include wrapper-edges-color(_palette(bg));
+  @include wrapper-edges-color(_palette(workshop));
 
   &:before,
   &:after {
@@ -222,7 +224,7 @@ background-color: rgba(125, 208, 37, 0.18) !important;
 
   @for $i from 2 through _misc(max-wrapper-styles) {
     $j: 3 * ($i - 1);
-    $color: desaturate(lighten(_palette(bg), $j), $j * 0.5);
+    $color: desaturate(lighten(_palette(workshop), $j), $j * 0.5);
 
     &.style#{$i} {
       background-color: $color;

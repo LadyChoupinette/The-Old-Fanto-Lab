@@ -13,6 +13,7 @@ class Layout extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
+            page: props.page,
             isPreloaded: true,
             fullMenu: props.fullMenu,
         };
@@ -30,29 +31,50 @@ class Layout extends React.Component {
         }
     }
 
+    classnamePage() {
+        let cName = this.state.isPreloaded ? 'is-preload' : '';
+        if (this.state.page === 'index') {
+            cName = cName + ' main-body'
+        } else if (this.state.page === 'fields') {
+            cName = cName + ' main-body-fields'
+        } else if (this.state.page === 'workshop') {
+            cName = cName + ' main-body-workshop'
+        }
+        return cName
+
+    }
+
     render() {
         const {children} = this.props;
-        const {isPreloaded} = this.state;
         return (
-            <>
-                <Helmet
-                    title="The Old Fanto-Lab"
-                    meta={[
-                        {name: 'description', content: 'The Old Fanto-Lab'},
-                        {name: 'keywords', content: 'site, web'},
-                    ]}
+            <> {this.state.page === 'index' ?
+            < Helmet
+                title="The Old Fanto-Lab"
+                meta={[
+            {name: 'description', content: 'The Old Fanto-Lab'},
+            {name: 'keywords', content: 'site, web'},
+                ]}
                 >
-                    <html lang="en"/>
+                <html lang="en"/>
                 </Helmet>
-                <div className={isPreloaded ? ' main-body  is-preload' : ' main-body'}>
-                    {/*    <div class="ee">X</div>*/}
+            :
+                < Helmet/>
+                }
+                <div className={this.classnamePage()}>
                     <TemporaryDrawer/>
-                    <div id="page-wrapper">
-                        {/*<SideBar fullMenu={false} />*/}
-                        {/*<SideBarHelp fullMenu={fullMenu} />*/}
-                        {children}
-                        {/*<Journey />*/}
-                    </div>
+                    {this.state.page === "index" ?
+                        <div id="page-wrapper">
+                            {children}
+                        </div>
+                        : this.state.page === "fields" ?
+                        <div id="page-wrapper-fields">
+                            {children}
+                        </div>
+                            :
+                            <div id="page-wrapper-workshop">
+                                {children}
+                            </div>
+                    }
                     <Footer/>
                 </div>
             </>
