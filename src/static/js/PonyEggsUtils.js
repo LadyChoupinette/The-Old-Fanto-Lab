@@ -1,6 +1,18 @@
 import {abi_PonyEgg,adrPonyEgg} from '../abi/abis';
 import web3 from './getWeb3';
 
+export async function totalEggMints(){
+    const w3 = await web3;
+    console.log(w3);
+    const acc = await w3.eth.getAccounts();
+    const adr = acc[0];
+
+    const contractPonyEggs = new w3.eth.Contract(abi_PonyEgg, adrPonyEgg);
+
+    let reqLeave = await contractPonyEggs.methods.totalSupply().call()
+    return reqLeave;
+}
+
 export default async function ponyMint (amount) {
         console.log(amount);
         const w3 = await web3;

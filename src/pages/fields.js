@@ -11,15 +11,19 @@ class Fields extends React.Component {
             <Layout fullMenu={false} page="fields">
                 <section id="banner-fields">
                     <div className="inner-fields">
-                        <p style={{textShadow: ' 1px 1px 1px #bbb831'}}
+                        <p style={{textShadow: ' 1px 1px 1px #00d93d'}}
                         >
                             You wander in the land around the The Old Lab. These lush grounds are filled with life,
                             from little creatures in the herbs to those big eggs that definitly look like
                             belongings to much bigger ones...
+                        </p>
                             <br/>
                             <br/>
+                        {/*<React.Fragment>*/}
                             <PonyEggs/>
+                        {/*</React.Fragment>*/}
                             <br/>
+                        <p style={{textShadow: ' 1px 1px 1px #d1ff00'}} >
                             <span style={{
                                 position:'relative',
                                 fontSize: 'x-large',

@@ -1,18 +1,20 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import NumericInput from "react-numeric-input";
 // import loadable from "@loadable/component";
-import ponyMint from "../../static/js/PonyEggsUtils";
+import ponyMint, {totalEggMints} from "../../static/js/PonyEggsUtils";
 // const ponyMint = loadable(() => import('../../static/js/PonyEggsUtils'));
 
 export default class PonyEggs extends React.Component {
 
-    totalMint = 0;
+    // totalMintsRes=0;
     // amount = 1;
+
 
     constructor() {
         super()
         this.state = {
             amount: 1,
+            totalMintsRes:0
         };
     }
 
@@ -21,30 +23,49 @@ export default class PonyEggs extends React.Component {
     }
 
     ponyMintParent;
+    getTotalMints;
 
-    componentDidMount() {
+
+    async componentDidMount() {
         this.ponyMintParent = async function (e) {
             let f = await ponyMint(e);
             console.log(f);
         }
+        this.getTotalMints = async function () {
+            let res = await totalEggMints();
+            return res
+
+        }
+        this.setState({
+            amount: this.state.amount,
+            totalMintsRes: await this.getTotalMints()
+        })
+        // this.getTotalMints();
+        // this.forceUpdate();
     }
 
+//     useEffect(() =>
+// {
+//         const function init = async() => {
+//             this.state.totalMintsRes = this.getTotalMints()
+//     }
+// })
+
     amountChange(e) {
+        // this.forceUpdate();
         console.log(e);
         this.state = {
             amount: e,
         }
     }
 
+    // useEffect(() => {
+    //
+    // })
+
 
     render() {
         return (
-            // <div>
-            //     <label for={this.amount}>Tip (for Dev)</label><br/>
-            //     <input type='number' name='amount' aria-label={'Amount'} value={1}/>
-            //     <button onClick={() => leaveJourney(this.amount, this.id)}>Mint Pony Eggs</button>
-            //     {this.amount*12} FTM
-            // </div>
             <div id="wrapperFields">
                 <br/>
                 <label>
@@ -132,8 +153,15 @@ export default class PonyEggs extends React.Component {
                 >
                     Mint !!!
                 </button>
+                <p style={{textShadow: ' 1px 1px 1px #ff8613',
+                fontSize:"xxx-large"}}
+                >
+
+                    Total Mint : {this.state.totalMintsRes} / 668
+                </p>
 
             </div>
+
         )
     }
 }
