@@ -6,11 +6,16 @@
 
 /* Wrapper */
 
+.div {
+  display: block;
+}
+
 .ee {
   color: aqua;
   position: relative;
   top: 500px
 }
+
 
 .MuiDrawer-paper{
 background-color: rgba(125, 208, 37, 0.18) !important;

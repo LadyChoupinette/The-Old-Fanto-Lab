@@ -1,15 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f7aa04f2-e5f1-46bf-b8b5-ca80a5dc2409" name="Changes" comment="">
+    <list default="true" id="f7aa04f2-e5f1-46bf-b8b5-ca80a5dc2409" name="Changes" comment="UIv0.2">
       <change afterPath="$PROJECT_DIR$/../Contract-Deployer/scripts/abis.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../Contract-Deployer/test/sample-test-testnet.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../Contract-Deployer/yarn-error.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Contract-Deployer/.idea/Contract-Deployer.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../Contract-Deployer/.idea/Contract-Deployer.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Contract-Deployer/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Contract-Deployer/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Contract-Deployer/contracts/FantomonTrainer.sol" beforeDir="false" afterPath="$PROJECT_DIR$/../Contract-Deployer/contracts/FantomonTrainer.sol" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Contract-Deployer/contracts/IEventJourney.sol" beforeDir="false" afterPath="$PROJECT_DIR$/../Contract-Deployer/contracts/IEventJourney.sol" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Contract-Deployer/contracts/Journey.sol" beforeDir="false" afterPath="$PROJECT_DIR$/../Contract-Deployer/contracts/Journey.sol" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Contract-Deployer/hardhat.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Contract-Deployer/hardhat.config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Contract-Deployer/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Contract-Deployer/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Contract-Deployer/test/sample-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Contract-Deployer/test/sample-test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,15 +33,15 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/../Contract-Deployer/package-lock.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Contract-Deployer/package.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Contract-Deployer/scripts/sample-script.js" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../Contract-Deployer/test/sample-test.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Contract-Deployer/tsconfig.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/config.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/package.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../fantomon-journey/LICENSE" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../fantomon-journey/package.json" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../Contract-Deployer/scripts/sample-script.js" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../Contract-Deployer/package.json" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/config.js" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../Contract-Deployer/package-lock.json" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/package.json" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../Contract-Deployer/tsconfig.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../gothums/gum.log" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="20av1hXtUWTI4GdfOzAl5Ymh1Lx" />
@@ -48,14 +51,14 @@
     <option name="showLibraryContents" value="true" />
     <option name="showMembers" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components" />
-    <property name="nodejs_package_manager_path" value="yarn" />
-    <property name="vue.rearranger.settings.migration" value="true" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/Guibole/Crypto/PFPony",
+    "nodejs_package_manager_path": "yarn",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Guibole\Crypto\The-Old-Fanto-Lab\src\components" />
@@ -111,6 +114,7 @@
       <option name="presentableId" value="Default" />
       <updated>1636295299967</updated>
       <workItem from="1636295301317" duration="7982000" />
+      <workItem from="1653526434575" duration="108000" />
     </task>
     <task id="LOCAL-00001" summary="change name">
       <created>1636297437466</created>
@@ -155,7 +159,6 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="change name" />
