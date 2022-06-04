@@ -17,7 +17,7 @@ class Fields extends React.Component {
             <p className="pfponies">
               <br />
               <br />
-              The PFPonies are onto us ! God forbid us all !
+              The PFPonies are onto us !
               <br />
               <br />
               You better catch as many of them as you can, who knows what

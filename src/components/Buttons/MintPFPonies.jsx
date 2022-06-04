@@ -154,7 +154,7 @@ export default class PFPonies extends React.Component {
               fontSize: 'xxx-large',
             }}
           >
-            Total Mint : {this.state.totalMintsRes} / 1000 (at least...)
+            Total Mint : {this.state.totalMintsRes} / 1000
           </p>
         </div>
       </div>
