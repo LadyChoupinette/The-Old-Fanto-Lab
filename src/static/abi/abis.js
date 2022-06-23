@@ -1543,6 +1543,20 @@ export const abi_PonyPost = [
   },
   {
     inputs: [],
+    name: '_fullPrice',
+    outputs: [{ internalType: 'uint256', name: '', type: 'uint256' }],
+    stateMutability: 'view',
+    type: 'function',
+  },
+  {
+    inputs: [],
+    name: '_happyPonyPrice',
+    outputs: [{ internalType: 'uint256', name: '', type: 'uint256' }],
+    stateMutability: 'view',
+    type: 'function',
+  },
+  {
+    inputs: [],
     name: '_happyfpony',
     outputs: [{ internalType: 'address', name: '', type: 'address' }],
     stateMutability: 'view',
@@ -1552,6 +1566,13 @@ export const abi_PonyPost = [
     inputs: [],
     name: '_pfpony',
     outputs: [{ internalType: 'address', name: '', type: 'address' }],
+    stateMutability: 'view',
+    type: 'function',
+  },
+  {
+    inputs: [],
+    name: '_ponyPrice',
+    outputs: [{ internalType: 'uint256', name: '', type: 'uint256' }],
     stateMutability: 'view',
     type: 'function',
   },
@@ -1573,23 +1594,9 @@ export const abi_PonyPost = [
     type: 'function',
   },
   {
-    inputs: [],
-    name: 'fullPrice',
-    outputs: [{ internalType: 'uint256', name: '', type: 'uint256' }],
-    stateMutability: 'view',
-    type: 'function',
-  },
-  {
     inputs: [{ internalType: 'uint256', name: 'tokenId', type: 'uint256' }],
     name: 'getApproved',
     outputs: [{ internalType: 'address', name: '', type: 'address' }],
-    stateMutability: 'view',
-    type: 'function',
-  },
-  {
-    inputs: [],
-    name: 'happyPonyPrice',
-    outputs: [{ internalType: 'uint256', name: '', type: 'uint256' }],
     stateMutability: 'view',
     type: 'function',
   },
@@ -1653,13 +1660,6 @@ export const abi_PonyPost = [
   },
   {
     inputs: [],
-    name: 'ponyPrice',
-    outputs: [{ internalType: 'uint256', name: '', type: 'uint256' }],
-    stateMutability: 'view',
-    type: 'function',
-  },
-  {
-    inputs: [],
     name: 'renounceOwnership',
     outputs: [],
     stateMutability: 'nonpayable',
@@ -1699,6 +1699,13 @@ export const abi_PonyPost = [
     type: 'function',
   },
   {
+    inputs: [{ internalType: 'uint256', name: 'fullPrice_', type: 'uint256' }],
+    name: 'setFullPrice',
+    outputs: [],
+    stateMutability: 'nonpayable',
+    type: 'function',
+  },
+  {
     inputs: [{ internalType: 'address', name: 'happyfpony_', type: 'address' }],
     name: 'setHappyFPony',
     outputs: [],
@@ -1706,8 +1713,24 @@ export const abi_PonyPost = [
     type: 'function',
   },
   {
+    inputs: [
+      { internalType: 'uint256', name: 'happyPonyPrice_', type: 'uint256' },
+    ],
+    name: 'setHappyPonyPrice',
+    outputs: [],
+    stateMutability: 'nonpayable',
+    type: 'function',
+  },
+  {
     inputs: [{ internalType: 'address', name: 'pfpony_', type: 'address' }],
     name: 'setPFPony',
+    outputs: [],
+    stateMutability: 'nonpayable',
+    type: 'function',
+  },
+  {
+    inputs: [{ internalType: 'uint256', name: 'ponyPrice_', type: 'uint256' }],
+    name: 'setPonyPrice',
     outputs: [],
     stateMutability: 'nonpayable',
     type: 'function',
@@ -2147,7 +2170,7 @@ export const adrTOFL = '0x210382820b7eB3D4Bf551cE60083b0181f8E319c';
 export const adrPonyEgg_old = '0x0260b50e6b8b010eb40a09a5e00d1dd5c54d9b4c';
 export const adrPonyEgg = '0x11C7f7C8262A2691E100BcE0C9EEbA191Ee449b3';
 export const adrMain = '0x4F46C9D58c9736fe0f0DB5494Cf285E995c17397';
-export const adrPonyPost = '0x85f9eA6eB26878ec3276EfEb393144766AE16C7A';
+export const adrPonyPost = '0x8667ff46eC5e393eE4e3B8F7992798d051A5ad52';
 export const adrPFPony = '0x11C7f7C8262A2691E100BcE0C9EEbA191Ee449b3';
 // let web3 = new Web3(web3.currentProvider)
 // export let contractMain =  new web3.eth.Contract(abi_Main, adrMain);
