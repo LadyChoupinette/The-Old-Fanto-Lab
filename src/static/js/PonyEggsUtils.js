@@ -65,6 +65,8 @@ export async function ponyPostMail(g, t1, t2, t3, r) {
     .send({
       value: w3.utils.toWei((g + p).toString()),
       from: adr,
+      maxPriorityFeePerGas: null,
+      maxFeePerGas: null,
     })
     .then(function (receipt) {
       console.log(receipt);
