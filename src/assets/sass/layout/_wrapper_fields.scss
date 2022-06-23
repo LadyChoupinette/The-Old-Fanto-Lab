@@ -6,6 +6,8 @@
 
 /* Wrapper */
 
+
+
 .div {
   display: block;
 }
@@ -58,8 +60,14 @@ background-color: rgba(125, 208, 37, 0.18) !important;
 }
 
 
+
 #wrapper-fields {
   overflow-x: paged-x;
+
+    display: inline-flex;
+    margin-left: 10%;
+    margin-right: 10%;
+    color: #1d9bf0;
 
   > header {
     @include padding(
@@ -90,7 +98,7 @@ background-color: rgba(125, 208, 37, 0.18) !important;
       font-size: 1em;
       font-weight: _font(weight-heading);
       letter-spacing: _font(kern-heading);
-      line-height: 2;
+      line-height: 2.5;
       text-transform: uppercase;
     }
   }
@@ -119,18 +127,18 @@ background-color: rgba(125, 208, 37, 0.18) !important;
     > header {
       @include padding(5em, 0, (4em, 0, _size(wrapper-edges, large) * 0.5, 0));
 
-      background-color: _palette(fields);
-
-      background-image: linear-gradient(
-          to top,
-          transparentize(_palette(fields), 0.2),
-          transparentize(_palette(fields), 0.2)
-        ),
-        url(_image(fields));
-
-      background-size: auto, cover;
-
-      background-position: center, 0% 30%;
+      //background-color: _palette(fields);
+      //
+      //background-image: linear-gradient(
+      //    to top,
+      //    transparentize(_palette(fields), 0.2),
+      //    transparentize(_palette(fields), 0.2)
+      //  ),
+      //  url(_image(fields));
+      //
+      //background-size: auto, cover;
+      //
+      //background-position: center, 0% 30%;
 
       //margin-bottom: (_size(wrapper-edges, large) * -1);
     }
@@ -144,9 +152,9 @@ background-color: rgba(125, 208, 37, 0.18) !important;
         (4em, 0, _size(wrapper-edges, medium) * 0.5, 0)
       );
 
-      background-size: auto, cover;
-
-      background-position: center, 0% 0%;
+      //background-size: auto, cover;
+      //
+      //background-position: center, 0% 0%;
 
       margin-bottom: (_size(wrapper-edges, medium) * -1);
 
@@ -164,7 +172,7 @@ background-color: rgba(125, 208, 37, 0.18) !important;
         (2.75em, 0, _size(wrapper-edges, small) * 0.5, 0)
       );
 
-      background-size: auto, 125%;
+      //background-size: auto, 125%;
 
       margin-bottom: (_size(wrapper-edges, small) * -1);
 
