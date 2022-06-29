@@ -16,6 +16,22 @@ export default function PonyPost() {
   const [recipient, setRecipient] = useState('');
   const [sent, setSent] = useState('');
 
+  const handleLine1 = (event) => {
+    const result = event.target.value.replace(/[<>]/gi, '');
+
+    setLine1(result);
+  };
+  const handleLine2 = (event) => {
+    const result = event.target.value.replace(/[<>]/gi, '');
+
+    setLine2(result);
+  };
+  const handleLine3 = (event) => {
+    const result = event.target.value.replace(/[<>]/gi, '');
+
+    setLine3(result);
+  };
+
   useEffect(() => {
     const initialize = async () => {
       const w3 = await web3;
@@ -86,8 +102,9 @@ export default function PonyPost() {
               <OutlinedInput
                 id="component-outlined"
                 value={line1}
+                // mask={[/[0-9a-zA-Z\s]*/]}
                 inputProps={{ maxLength: 20 }}
-                onChange={(e) => setLine1(e.target.value)}
+                onChange={(e) => handleLine1(e)}
                 label="Line 1"
               />
             </FormControl>
@@ -97,7 +114,7 @@ export default function PonyPost() {
                 id="component-outlined"
                 value={line2}
                 inputProps={{ maxLength: 20 }}
-                onChange={(e) => setLine2(e.target.value)}
+                onChange={(e) => handleLine2(e)}
                 label="Line 2"
               />
             </FormControl>
@@ -107,7 +124,7 @@ export default function PonyPost() {
                 id="component-outlined"
                 value={line3}
                 inputProps={{ maxLength: 20 }}
-                onChange={(e) => setLine3(e.target.value)}
+                onChange={(e) => handleLine3(e)}
                 label="Line 3"
               />
             </FormControl>
