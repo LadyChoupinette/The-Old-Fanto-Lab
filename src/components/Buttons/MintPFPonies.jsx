@@ -151,7 +151,7 @@ export default class PFPonies extends React.Component {
               }}
               onClick={() => this.ponyMintParent(this.state.amount)}
             >
-              Mint !!!
+              Mint Paused :(
             </button>
             <br />
           </Grid>
