@@ -17,17 +17,17 @@ export default function PonyPost() {
   const [sent, setSent] = useState('');
 
   const handleLine1 = (event) => {
-    const result = event.target.value.replace(/[<>]/gi, '');
+    const result = event.target.value.replace(/[<>&]/gi, '');
 
     setLine1(result);
   };
   const handleLine2 = (event) => {
-    const result = event.target.value.replace(/[<>]/gi, '');
+    const result = event.target.value.replace(/[<>&]/gi, '');
 
     setLine2(result);
   };
   const handleLine3 = (event) => {
-    const result = event.target.value.replace(/[<>]/gi, '');
+    const result = event.target.value.replace(/[<>&]/gi, '');
 
     setLine3(result);
   };
