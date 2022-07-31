@@ -1,8 +1,8 @@
-import React from 'react';
-import NumericInput from 'react-numeric-input';
+import React from 'react'
+import NumericInput from 'react-numeric-input'
 // import loadable from "@loadable/component";
-import ponyMint, { totalEggMints } from '../../static/js/PonyEggsUtils';
-import { Grid } from '@mui/material';
+import ponyMint, { totalEggMints } from '../../static/js/PonyEggsUtils'
+import { Grid } from '@mui/material'
 // const ponyMint = loadable(() => import('../../static/js/PonyEggsUtils'));
 
 export default class PFPonies extends React.Component {
@@ -151,7 +151,7 @@ export default class PFPonies extends React.Component {
               }}
               onClick={() => this.ponyMintParent(this.state.amount)}
             >
-              Mint Paused :(
+              Mint !
             </button>
             <br />
           </Grid>
