@@ -21,7 +21,7 @@ export default class PFPonies extends React.Component {
   }
 
   myFormat(num) {
-    return num + ' PFPonies (25 $FTM each)';
+    return num + ' PFPonies (20 $FTM each)';
   }
 
   async componentDidMount() {

@@ -32,7 +32,7 @@ export default async function ponyMint(amount) {
   let reqLeave = await contractPonyEggs.methods
     .mint(amount)
     .send({
-      value: w3.utils.toWei(amount.toString()) * 25,
+      value: w3.utils.toWei(amount.toString()) * 20,
       from: adr,
     })
     .then(function (receipt) {
