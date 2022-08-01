@@ -33,7 +33,7 @@ export default async function ponyMint(amount) {
     .mint(amount)
     .send({
       value: w3.utils.toWei(amount.toString()) * 20,
-      gas:1500000,
+      gas:350000*amount,
       from: adr,
     })
     .then(function (receipt) {
