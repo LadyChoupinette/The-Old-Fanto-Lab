@@ -64,7 +64,7 @@ export default class PFPonies extends React.Component {
     return (
       <div className="buttons-fields">
         <Grid container spacing={10}>
-          <Grid item xs={4}>
+          <Grid item xs={12}>
             <br />
             <label style={{ textAlign: 'center' }}>
               <div>
@@ -79,7 +79,7 @@ export default class PFPonies extends React.Component {
                       background: '#000000 ',
                       boxShadow:
                         '0 0 1px 1px #ffffff inset, 1px 1px 5px -1px #000',
-                      padding: '2px 2.26ex 2px 2px',
+                      padding: '2px 4ex 2px 2px',
                       borderRadius: '6px 3px 3px 6px',
                       fontSize: '32',
                       width: '15em',
@@ -89,7 +89,7 @@ export default class PFPonies extends React.Component {
                     input: {
                       borderRadius: '4px 2px 2px 4px',
                       color: '#ffffff',
-                      padding: '1ex 1ex !important',
+                      padding: '2ex 2ex !important',
                       border: '1px solid #fff',
                       marginRight: 4,
                       display: 'block !important',
@@ -100,6 +100,9 @@ export default class PFPonies extends React.Component {
                       border: '1px inset #69C',
                       outline: 'none',
                     },
+                    b:{
+                      width:'1em',
+                  },
                     arrowUp: {
                       borderBottomColor: 'rgb(255,255,255)',
                     },
@@ -112,9 +115,7 @@ export default class PFPonies extends React.Component {
               </div>
             </label>
           </Grid>
-          <Grid item xs={4}></Grid>
-          <Grid item xs={4}>
-            <br />
+          <Grid item xs={12}>
             <button
               className="blackbg"
               style={{
@@ -131,7 +132,7 @@ export default class PFPonies extends React.Component {
                 input: {
                   borderRadius: '4px 2px 2px 4px',
                   color: '#ffffff',
-                  padding: '1ex 1ex !important',
+                  padding: '2ex 2ex !important',
                   border: '1px solid #fff',
                   marginRight: 4,
                   display: 'block !important',
