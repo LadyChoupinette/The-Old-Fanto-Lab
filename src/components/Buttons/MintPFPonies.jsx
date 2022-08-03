@@ -1,5 +1,4 @@
 import React from 'react'
-import NumericInput from 'react-numeric-input'
 // import loadable from "@loadable/component";
 import ponyMint, { totalEggMints } from '../../static/js/PonyEggsUtils'
 import { Grid } from '@mui/material'
@@ -64,57 +63,57 @@ export default class PFPonies extends React.Component {
     return (
       <div className="buttons-fields">
         <Grid container spacing={10}>
-          <Grid item xs={12}>
-            <br />
-            <label style={{ textAlign: 'center' }}>
-              <div>
-                <NumericInput
-                  precision={0}
-                  value={this.state.amount}
-                  step={1}
-                  format={this.myFormat}
-                  onChange={(e) => this.amountChange(e)}
-                  style={{
-                    wrap: {
-                      background: '#000000 ',
-                      boxShadow:
-                        '0 0 1px 1px #ffffff inset, 1px 1px 5px -1px #000',
-                      padding: '2px 4ex 2px 2px',
-                      borderRadius: '6px 3px 3px 6px',
-                      fontSize: '32',
-                      width: '15em',
-                      marginLeft: '1em',
-                      marginRight: '1em',
-                    },
-                    input: {
-                      borderRadius: '4px 2px 2px 4px',
-                      color: '#ffffff',
-                      padding: '2ex 2ex !important',
-                      border: '1px solid #fff',
-                      marginRight: 4,
-                      display: 'block !important',
-                      fontWeight: 100,
-                      textShadow: '1px 1px 1px rgba(0, 0, 0, 0.1)',
-                    },
-                    'input:focus': {
-                      border: '1px inset #69C',
-                      outline: 'none',
-                    },
-                    b:{
-                      width:'1em',
-                  },
-                    arrowUp: {
-                      borderBottomColor: 'rgb(255,255,255)',
-                    },
-                    arrowDown: {
-                      borderTopColor: 'rgb(255,255,255)',
-                    },
-                  }}
-                />
-                <br />
-              </div>
-            </label>
-          </Grid>
+          {/*<Grid item xs={12}>*/}
+          {/*  <br />*/}
+          {/*  <label style={{ textAlign: 'center' }}>*/}
+          {/*    <div>*/}
+          {/*      <NumericInput*/}
+          {/*        precision={0}*/}
+          {/*        value={this.state.amount}*/}
+          {/*        step={1}*/}
+          {/*        format={this.myFormat}*/}
+          {/*        onChange={(e) => this.amountChange(e)}*/}
+          {/*        style={{*/}
+          {/*          wrap: {*/}
+          {/*            background: '#000000 ',*/}
+          {/*            boxShadow:*/}
+          {/*              '0 0 1px 1px #ffffff inset, 1px 1px 5px -1px #000',*/}
+          {/*            padding: '2px 4ex 2px 2px',*/}
+          {/*            borderRadius: '6px 3px 3px 6px',*/}
+          {/*            fontSize: '32',*/}
+          {/*            width: '15em',*/}
+          {/*            marginLeft: '1em',*/}
+          {/*            marginRight: '1em',*/}
+          {/*          },*/}
+          {/*          input: {*/}
+          {/*            borderRadius: '4px 2px 2px 4px',*/}
+          {/*            color: '#ffffff',*/}
+          {/*            padding: '2ex 2ex !important',*/}
+          {/*            border: '1px solid #fff',*/}
+          {/*            marginRight: 4,*/}
+          {/*            display: 'block !important',*/}
+          {/*            fontWeight: 100,*/}
+          {/*            textShadow: '1px 1px 1px rgba(0, 0, 0, 0.1)',*/}
+          {/*          },*/}
+          {/*          'input:focus': {*/}
+          {/*            border: '1px inset #69C',*/}
+          {/*            outline: 'none',*/}
+          {/*          },*/}
+          {/*          b:{*/}
+          {/*            width:'1em',*/}
+          {/*        },*/}
+          {/*          arrowUp: {*/}
+          {/*            borderBottomColor: 'rgb(255,255,255)',*/}
+          {/*          },*/}
+          {/*          arrowDown: {*/}
+          {/*            borderTopColor: 'rgb(255,255,255)',*/}
+          {/*          },*/}
+          {/*        }}*/}
+          {/*      />*/}
+          {/*      <br />*/}
+          {/*    </div>*/}
+          {/*  </label>*/}
+          {/*</Grid>*/}
           <Grid item xs={12}>
             <button
               className="blackbg"
@@ -155,6 +154,8 @@ export default class PFPonies extends React.Component {
               Mint !
             </button>
             <br />
+            <br />
+            <span style={{color:'white'}}>1 at a time because Choupinette sucks at dev</span>
           </Grid>
           <Grid item xs={12}>
             <div>

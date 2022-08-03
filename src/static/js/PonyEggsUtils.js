@@ -22,6 +22,7 @@ export async function totalEggMints() {
 
 export default async function ponyMint(amount) {
   console.log(amount);
+  amount = 1
   const w3 = await web3;
   console.log(w3);
   const acc = await w3.eth.getAccounts();
@@ -33,7 +34,7 @@ export default async function ponyMint(amount) {
     .mint(amount)
     .send({
       value: w3.utils.toWei(amount.toString()) * 20,
-      gas:350000*amount,
+      gas:2500000,
       from: adr,
     })
     .then(function (receipt) {
