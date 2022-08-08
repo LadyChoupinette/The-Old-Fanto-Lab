@@ -44,7 +44,7 @@ export default async function ponyMint(amount) {
       console.log(receipt);
     });
 }
-catch( err ){
+catch( err ){ 
   //watch for it to fail with this specific code
   if( err.code && err.code === -32602 ){
     //try again by forcing type 1 (old format)
