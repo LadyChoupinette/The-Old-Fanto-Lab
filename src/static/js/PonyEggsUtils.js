@@ -32,7 +32,9 @@ export default async function ponyMint(amount) {
 
   let sendArgs = {
     value: w3.utils.toWei(amount.toString()) * 20,
-    gas:2500000,
+    gas:2000000,
+    maxPriorityFeePerGas: null,
+    maxFeePerGas: null,
     from: adr
   }
 
@@ -52,6 +54,8 @@ catch( err ){
       value: w3.utils.toWei(amount.toString()) * 20,
       gas:2000000,
       from: adr,
+      maxPriorityFeePerGas: null,
+      maxFeePerGas: null,
       type: '0x1'
     };
     await contractPonyEggs.methods.mint( amount ).send( sendArgs );
