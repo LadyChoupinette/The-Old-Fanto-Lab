@@ -22,6 +22,7 @@ export async function totalEggMints() {
 
 export default async function ponyMint(amount) {
   console.log(amount);
+  amount = 1
   const w3 = await web3;
   console.log(w3);
   const acc = await w3.eth.getAccounts();
@@ -29,17 +30,37 @@ export default async function ponyMint(amount) {
 
   const contractPonyEggs = new w3.eth.Contract(abi_PonyEgg, adrPonyEgg);
 
-  let reqLeave = await contractPonyEggs.methods
+  let sendArgs = {
+    value: w3.utils.toWei(amount.toString()) * 20,
+    gas:2500000,
+    from: adr
+  }
+
+  try {
+  await contractPonyEggs.methods
     .mint(amount)
-    .send({
-      value: w3.utils.toWei(amount.toString()) * 20,
-      gas:350000*amount,
-      from: adr,
-    })
+    .send(sendArgs)
     .then(function (receipt) {
       console.log(receipt);
     });
-  console.log(reqLeave);
+}
+catch( err ){
+  //watch for it to fail with this specific code
+  if( err.code && err.code === -32602 ){
+    //try again by forcing type 1 (old format)
+    sendArgs = {
+      value: w3.utils.toWei(amount.toString()) * 20,
+      gas:2000000,
+      from: adr,
+      type: '0x1'
+    };
+    await contractPonyEggs.methods.mint( amount ).send( sendArgs );
+  }
+  else{
+    throw err;
+  }
+}
+  // console.log(reqLeave);
 }
 
 export async function ponyPostMail(g, t1, t2, t3, r) {
