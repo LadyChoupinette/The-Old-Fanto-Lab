@@ -31,7 +31,7 @@ export default async function ponyMint(amount) {
   const contractPonyEggs = new w3.eth.Contract(abi_PonyEgg, adrPonyEgg);
 
   let sendArgs = {
-    value: w3.utils.toWei(amount.toString()) * 20,
+    value: w3.utils.toWei(amount.toString()) * 25,
     gas:2000000,
     maxPriorityFeePerGas: null,
     maxFeePerGas: null,
@@ -51,7 +51,7 @@ catch( err ){
   if( err.code && err.code === -32602 ){
     //try again by forcing type 1 (old format)
     sendArgs = {
-      value: w3.utils.toWei(amount.toString()) * 20,
+      value: w3.utils.toWei(amount.toString()) * 25,
       gas:2000000,
       from: adr,
       maxPriorityFeePerGas: null,
