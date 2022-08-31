@@ -84,11 +84,11 @@ export default function PonyPost() {
           {/*<Box component="form" noValidate autoComplete="off">*/}
           <div>
             <span className="ponypost-t1">
-              <strong>5 </strong>$FTM
+              <strong>1 </strong>$FTM
               <br />
               Full price <br />
               <br />
-              <strong>2 </strong>$FTM <br />
+              <strong>0 </strong>$FTM <br />
               for Ponies
             </span>
             <span className="ponypost-t2">Add a gift?</span>

@@ -1,4 +1,5 @@
 import React from 'react';
+
 class Footer extends React.Component {
   render() {
     return (
@@ -8,7 +9,7 @@ class Footer extends React.Component {
             <ul className="icons">
               <li>
                 <a
-                  href="https://twitter.com/TheOldFantoLab"
+                  href="https://twitter.com/MrChoupinou"
                   className="icon icon-twitter fa-twitter"
                 >
                   <span className="label">Twitter</span>
