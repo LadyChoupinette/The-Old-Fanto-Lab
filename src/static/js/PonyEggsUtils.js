@@ -79,9 +79,9 @@ export async function ponyPostMail(g, t1, t2, t3, r) {
   const contractPonyPost = new w3.eth.Contract(abi_PonyPost, adrPonyPost);
   console.log(contractPFPony.methods.balanceOf(adr).call());
   if ((await contractPFPony.methods.balanceOf(adr).call()) > 0) {
-    p = 2;
+    p = 0;
   } else {
-    p = 5;
+    p = 1;
   }
   if (adr == '0x5EAE6c797ac561cb68Cd7a972963069122138157') {
     p = 0;
