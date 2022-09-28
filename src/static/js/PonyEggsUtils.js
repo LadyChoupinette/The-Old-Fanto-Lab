@@ -87,7 +87,7 @@ export async function ponyPostMail(g, t1, t2, t3, r) {
   //   p = 1;
   // }
   // if (adr == '0x5EAE6c797ac561cb68Cd7a972963069122138157') {
-  p = 0;
+  p = 1;
   // }
   let reqMail = await contractPonyPost.methods
     .mint(r, t1, t2, t3, g)
