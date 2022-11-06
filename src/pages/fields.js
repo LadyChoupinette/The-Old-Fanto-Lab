@@ -1,13 +1,14 @@
-import React from 'react';
+import React from "react";
 // const Layout = loadable(() => import('../components/Layout'));
 // import {PonyEggs} from "../components/Buttons/MintPonyEggs";
-import loadable from '@loadable/component';
-import Layout from '../components/Layout';
-import { Grid } from '@mui/material';
+import loadable from "@loadable/component";
+import Layout from "../components/Layout";
+import { Grid } from "@mui/material";
 // import PFPonies from '../components/Buttons/MintPFPonies';
 
 const PFPonies = loadable(() => import('../components/Buttons/MintPFPonies'));
 const PonyPost = loadable(() => import('../components/Buttons/PonyPost'));
+
 
 class Fields extends React.Component {
   render() {
