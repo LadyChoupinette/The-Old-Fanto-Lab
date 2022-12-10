@@ -67,39 +67,52 @@ catch( err ){
   // console.log(reqLeave);
 }
 
-export async function ponyPostMail(g, t1, t2, t3, r) {
+export async function ponyPostMail(r, t1, t2, t3, g) {
   const w3 = await web3;
   console.log(w3);
   console.log(g, t1, t2, t3, r);
   const acc = await w3.eth.getAccounts();
   const adr = acc[0];
 
-  let p = 5;
+  let p = 1;
   const contractPFPony = new w3.eth.Contract(abi_PFPony, adrPFPony);
   const contractPonyPost = new w3.eth.Contract(abi_PonyPost, adrPonyPost);
-  console.log(contractPFPony.methods.balanceOf(adr).call());
+  // console.log(contractPFPony.methods.balanceOf(adr).call());
 
   //pricee free
 
   if ((await contractPFPony.methods.balanceOf(adr).call()) > 0) {
     console.log("pfpony found!");
     p = 0;
-  } else {
-    p = 1;
-    console.log("pfpony not found!");
   }
-    let reqMail = await contractPonyPost.methods
-      .mint(r, t1, t2, t3, g)
-      .send({
+  // else {
+  //   console.log("pfpony not found!");
+  //   p = 1;
+  // }
+
+  let reqMail = contractPonyPost.methods
+    .mint(r, t1, t2, t3, g)
+
+  console.log({
+    value: w3.utils.toWei((g + p).toString()),
+    from: adr,
+    maxPriorityFeePerGas: null,
+    maxFeePerGas: null,
+});
+    await reqMail.send({
         value: w3.utils.toWei((g + p).toString()),
         from: adr,
         maxPriorityFeePerGas: null,
         maxFeePerGas: null,
-      })
-      .then(function(receipt) {
-        console.log(receipt);
-      });
-    console.log(reqMail);
+      },(e,r)=>{
+        console.log(e,r);
+      }).then(function (receipt) {
+      console.log(receipt);
+    });
+      // .then(function(receipt) {
+      //   console.log(receipt);
+      // });
+    // console.log(reqMail);
 }
 
 // export default PonyUtils;

@@ -57,16 +57,16 @@ export default function PonyPost() {
   }
 
   async function ponyPostMint(g, l1, l2, l3, r) {
-    console.log(g);
+    console.log(r);
     console.log(l1);
     console.log(l2);
     console.log(l3);
-    console.log(r);
+    console.log(g);
 
     setSent('On its way...');
     let req;
     try {
-      req = await ponyPostMail(g, l1, l2, l3, r);
+      req = await ponyPostMail(r, l1, l2, l3, g);
       console.log('req on its way');
       console.log('req is ', req);
     } catch {
