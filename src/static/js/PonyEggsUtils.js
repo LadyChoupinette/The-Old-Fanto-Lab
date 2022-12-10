@@ -82,13 +82,12 @@ export async function ponyPostMail(g, t1, t2, t3, r) {
   //pricee free
 
   if ((await contractPFPony.methods.balanceOf(adr).call()) > 0) {
+    console.log("pfpony found!");
     p = 0;
   } else {
     p = 1;
+    console.log("pfpony not found!");
   }
-  if (adr == '0x5EAE6c797ac561cb68Cd7a972963069122138157') {
-    p = 1;
-    // }
     let reqMail = await contractPonyPost.methods
       .mint(r, t1, t2, t3, g)
       .send({
@@ -101,7 +100,6 @@ export async function ponyPostMail(g, t1, t2, t3, r) {
         console.log(receipt);
       });
     console.log(reqMail);
-  }
 }
 
 // export default PonyUtils;
