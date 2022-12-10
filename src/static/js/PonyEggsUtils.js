@@ -74,7 +74,7 @@ export async function ponyPostMail(r, t1, t2, t3, g) {
   const acc = await w3.eth.getAccounts();
   const adr = acc[0];
 
-  let p = 1;
+  let p = 0;
   const contractPFPony = new w3.eth.Contract(abi_PFPony, adrPFPony);
   const contractPonyPost = new w3.eth.Contract(abi_PonyPost, adrPonyPost);
   // console.log(contractPFPony.methods.balanceOf(adr).call());

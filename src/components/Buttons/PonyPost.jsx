@@ -7,7 +7,7 @@ import { abi_PonyPost, adrPonyPost } from '../../static/abi/abis';
 import { ponyPostMail } from '../../static/js/PonyEggsUtils';
 
 export default function PonyPost() {
-  const [amountGift, setAmountGift] = useState(0);
+  const [amountGift, setAmountGift] = useState(1);
   const [tot, setTot] = useState(0);
   const [price, setPrice] = useState(0);
   const [line1, setLine1] = useState('');
@@ -87,10 +87,11 @@ export default function PonyPost() {
             <span className="ponypost-t1">
               <strong>1 </strong>$FTM
               <br />
-              Full price <br />
+              minimum <br />
+              as a <strong>gift</strong>
               <br />
-              <strong>0 </strong>$FTM <br />
-              for Ponies
+              💖🦄💖
+              <br />
             </span>
             <span className="ponypost-t2">Add a gift?</span>
             <span className="ponypost-t3">
@@ -152,7 +153,7 @@ export default function PonyPost() {
               precision={0}
               value={amountGift}
               step={1}
-              min={0}
+              min={1}
               format={myFormat}
               onChange={(e) => setAmountGift(e)}
               style={{
