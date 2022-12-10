@@ -56,7 +56,7 @@ export default function PonyPost() {
     return num + ' FTM';
   }
 
-  async function ponyPostMint(g, l1, l2, l3, r) {
+  async function ponyPostMint(r, l1, l2, l3, g) {
     console.log(r);
     console.log(l1);
     console.log(l2);
@@ -69,7 +69,8 @@ export default function PonyPost() {
       req = await ponyPostMail(r, l1, l2, l3, g);
       console.log('req on its way');
       console.log('req is ', req);
-    } catch {
+    } catch (err) {
+      console.log('err is ', err);
       setSent('Error :( bad Ponies !');
     } finally {
       console.log('req is ', req);
@@ -194,7 +195,7 @@ export default function PonyPost() {
             <button
               id="ponypost-mail"
               onClick={() =>
-                ponyPostMint(amountGift, line1, line2, line3, recipient)
+                ponyPostMint(recipient, line1, line2, line3, amountGift)
               }
             >
               MAIL !
