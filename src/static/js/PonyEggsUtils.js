@@ -81,10 +81,10 @@ export async function ponyPostMail(r, t1, t2, t3, g) {
 
   //pricee free
 
-  if ((await contractPFPony.methods.balanceOf(adr).call()) > 0) {
-    console.log("pfpony found!");
-    p = 0;
-  }
+  // if ((await contractPFPony.methods.balanceOf(adr).call()) > 0) {
+  //   console.log("pfpony found!");
+  //   p = 0;
+  // }
   // else {
   //   console.log("pfpony not found!");
   //   p = 1;
