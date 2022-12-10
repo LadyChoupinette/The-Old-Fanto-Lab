@@ -81,26 +81,27 @@ export async function ponyPostMail(g, t1, t2, t3, r) {
 
   //pricee free
 
-  // if ((await contractPFPony.methods.balanceOf(adr).call()) > 0) {
-  //   p = 0;
-  // } else {
-  //   p = 1;
-  // }
-  // if (adr == '0x5EAE6c797ac561cb68Cd7a972963069122138157') {
-  p = 1;
-  // }
-  let reqMail = await contractPonyPost.methods
-    .mint(r, t1, t2, t3, g)
-    .send({
-      value: w3.utils.toWei((g + p).toString()),
-      from: adr,
-      maxPriorityFeePerGas: null,
-      maxFeePerGas: null,
-    })
-    .then(function (receipt) {
-      console.log(receipt);
-    });
-  console.log(reqMail);
+  if ((await contractPFPony.methods.balanceOf(adr).call()) > 0) {
+    p = 0;
+  } else {
+    p = 1;
+  }
+  if (adr == '0x5EAE6c797ac561cb68Cd7a972963069122138157') {
+    p = 1;
+    // }
+    let reqMail = await contractPonyPost.methods
+      .mint(r, t1, t2, t3, g)
+      .send({
+        value: w3.utils.toWei((g + p).toString()),
+        from: adr,
+        maxPriorityFeePerGas: null,
+        maxFeePerGas: null,
+      })
+      .then(function(receipt) {
+        console.log(receipt);
+      });
+    console.log(reqMail);
+  }
 }
 
 // export default PonyUtils;
