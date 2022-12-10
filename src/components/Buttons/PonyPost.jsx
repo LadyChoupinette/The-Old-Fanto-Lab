@@ -88,7 +88,7 @@ export default function PonyPost() {
               <strong>1 </strong>$FTM
               <br />
               minimum <br />
-              as a <strong>gift</strong>
+              as a <strong>gift !</strong>
               <br />
               💖🦄💖
               <br />
@@ -105,6 +105,7 @@ export default function PonyPost() {
               <br /> on the right then click on <strong>MAIL</strong> to send
               your message !
             </span>
+            <span className="ponypost-t4">Sorry, Russian not supported :(</span>
             <FormControl id="ponypost-line1">
               <InputLabel htmlFor="ponypost-line1">Line 1</InputLabel>
               <OutlinedInput
